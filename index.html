@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Care Bridge</title>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&family=Instrument+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@300;400&family=Instrument+Serif:wght@300;400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,120 +15,346 @@
         body {
             font-family: "Instrument Sans", sans-serif;
             overflow-x: hidden;
-            background: linear-gradient(to bottom, #fff3e0, #ffcc80);
+            background: linear-gradient(to bottom, #ffcc80 0%, #ffffff 90%); /* Gradient stops at viewport height */
             min-height: 100vh;
         }
 
         .navbar {
             position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 50vw;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: flex-end;
-            gap: 20px;
+            top: 24px;
+            right: 5vw;
+            left: auto;
+            width: 45vw;
+            padding: 8px 12px 12px 12px;
             background: rgba(255, 255, 255, 0.25);
             border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
             z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .navbar a {
-            color: #333;
+            color: #000;
+            font-weight: lighter;
             text-decoration: none;
             font-size: 18px;
-            padding: 8px 15px;
+            padding: 6px 12px;
+            top: 2px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
             position: relative;
-            z-index: 1;
-            transition: color 0.3s ease;
+            height: 100%;
+            transition: top 1.5s ease;
         }
 
-        .hover-bg {
+        .navbar:has(a.active) .artemis {
+            position: relative;
+            top: 0px;
+        }
+
+        .navbar a.active:not(#artemisID) {
+            color: #8A6EFF;
+            position: relative;
+            top: -2px;
+        }
+
+        .navbar .underline {
             position: absolute;
-            height: 70%;
-            top: 15%;
-            background: #800080;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            z-index: 0;
+            bottom: 18px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #8A6EFF;
+            transition: transform 1.5s ease;
+            pointer-events: none;
         }
 
-        .navbar a.active {
+        .artemis {
+            background: #9E87FF;
             color: white;
+            border-radius: 50px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            margin: -16px -24px;
         }
 
-        .navbar a:hover {
-            color: white;
-        }
-
-        .navbar a:not(:hover):not(.active) {
-            color: #333;
+        .navbar a:last-child.active + .underline {
+            display: none;
         }
 
         .logo {
             position: fixed;
-            top: 20px;
+            top: 0px;
             left: 20px;
-            width: 100px;
-            height: 100px;
-            background: #007bff;
+            width: 120px;
+            height: 120px;
+            background-image: url("assets/bg_logo.png");
+            background-size: cover;
+            background-repeat: no-repeat;
             z-index: 10;
         }
 
         .hero {
             min-height: 100vh;
-            padding-top: 150px;
+            padding-top: 100px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            position: relative;
+        }
+
+        .heading-container {
+            position: absolute;
+            top: 15%;
         }
 
         .hero h1 {
+            margin-top: 30px;
             font-size: 4.5rem;
             color: #333;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             font-family: "Instrument Sans", sans-serif;
+            z-index: 10;
+            line-height: 80px;
         }
 
         .hero h1 span {
             font-family: "Instrument Serif", serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .hero-bg-logo {
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-55%, -60%);
+            width: 600px;
+            height: 600px;
+            background-image: url("assets/bg_logo.png");
+            background-size: cover;
+            color: #403219;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .inquire-button {
+            font-size: 18px;
+            font-family: "Instrument Sans", sans-serif;
+            background: #8A6EFF;
+            color: #FFEAC8;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 30px;
+            cursor: pointer;
+            z-index: 10;
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            transition: background 0.8s ease;
+            margin-bottom: 40px;
+        }
+
+        .inquire-button span {
+            display: inline-block;
+            transition: transform 0.8s ease;
+            position: relative;
+            z-index: 3;
+        }
+
+        .inquire-button::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            width: 34px;
+            height: 34px;
+            background-image: url("assets/button_arrow_backgrounds.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            z-index: 1;
+        }
+
+        .inquire-button::after {
+            content: '';
+            position: absolute;
+            left: 13px;
+            width: 18px;
+            height: 18px;
+            background-image: url("assets/diagonal_arrow.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            z-index: 2;
+        }
+
+        .inquire-button:hover span {
+            transform: translateX(17px);
+        }
+
+        .inquire-button:hover::before,
+        .inquire-button:hover::after {
+            opacity: 1;
         }
 
         .carousel-container {
-            width: 100vw;
-            overflow: hidden;
-            position: relative;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 18%;
+            right: 0;
+            bottom: 0;
+            perspective: 2000px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 0;
         }
 
         .carousel {
+            position: relative;
+            width: 100%;
+            height: 70%; /* Adjust height to leave space for dots */
+            transform-style: preserve-3d;
             display: flex;
-            width: calc(60vw * 10); /* 50vw box + 10vw gap * 10 items */
-            gap: 10vw;
-            transform: translateX(-95vw); /* Adjusted to center 3rd box symmetrically */
-            transition: transform 1s ease-in-out;
+            justify-content: center;
+            align-items: center;
         }
 
         .carousel-item {
-            flex: 0 0 50vw;
-            height: 500px;
+            position: absolute;
+            width: min(40vw, 500px);  /* Reduced width */
+            height: min(45vh, 350px);  /* Increased height */
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            transition: all 1s ease;
+            border-radius: 10px;
+            backface-visibility: hidden;
+            transform-origin: center center;
+            cursor: pointer; /* Make items clickable */
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            top: 75%; /* Positioned 30px below the carousel */
             display: flex;
             justify-content: center;
+            align-items: center;
+            gap: 20px; /* Space between dots */
+        }
+
+        .carousel-indicator {
+            width: 10px; /* Smaller dots */
+            height: 10px; /* Smaller dots */
+            background-color: purple;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            opacity: 0.4;
+            transition: opacity 0.3s ease;
+        }
+
+        .carousel-indicator.active {
+            opacity: 0.8; /* Lighter active dot */
+        }
+
+        /* New styles for content below carousel */
+        .content-section {
+            background-color: #ffffff; /* White background below carousel */
+            width: 100%;
+            padding: 60px 0; /* Vertical padding for spacing */
+            text-align: center;
+        }
+
+        .content-section h2 {
+            font-family: "Instrument Serif", serif;
+            font-style: italic;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .content-section h2 span {
+            color: #ff6200; /* Orange for "Integrity" */
+        }
+
+        .content-section h2 span:not(.integrity) {
+            color: #8A6EFF; /* Purple for other words */
+        }
+
+        .content-section p {
+            font-family: "Instrument Sans", sans-serif;
+            font-size: 18px;
+            color: #000000; /* Black text */
+        }
+
+        .integrity-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .integrity-para {
+            color: black;
+            font-size: 18px;
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .heading-para {
+            color: #ffcc80;
+            font-family: "Instrument Serif", sans-serif;
+            font-weight: 300;
+            width: 100%;
+            text-align: center;
+            font-size: 60px;
+            font-style: italic;
+        }
+
+        .heading-para span {
+            color: #8A6EFF;
+        }
+
+        .row-of-circles {
+            display: flex;
+            justify-content: space-between;
+            width: 70vw;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .circle-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 200px;
             align-items: center;
         }
 
-        .carousel-box {
-            width: 50vw;
-            height: 100%;
-            background: #f0f0f0;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            color: #333;
+        .circle {
+            height: 150px;
+            width: 150px;
+            background-color: #ff6c6c;
+            border-radius: 100%;
         }
     </style>
 </head>
@@ -139,105 +365,240 @@
         <a href="#">Services</a>
         <a href="#">Impact</a>
         <a href="#">Social Care</a>
-        <a href="#">Artemis Partnership</a>
-        <div class="hover-bg"></div>
+        <a id="artemisID" href="#"><div class="artemis">Artemis Partnership</div></a>
+        <span class="underline"></span>
     </nav>
 
     <section class="hero">
-        <h1><span>Bridging</span> care providers<br>and care seekers</h1>
+        <div class="heading-container">
+            <h1><span>Bridging</span> care providers<br>and care seekers</h1>
+            <div class="hero-bg-logo"></div>
+            <button class="inquire-button"><span>Inquire now</span></button>
+        </div>
         <div class="carousel-container">
-            <div class="carousel">
-                <!-- Original 5 items -->
-                <div class="carousel-item">
-                    <div class="carousel-box" style="background: #ffebee;">Box 1</div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-box" style="background: #e3f2fd;">Box 2</div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-box" style="background: #e8f5e9;">Box 3</div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-box" style="background: #fff3e0;">Box 4</div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-box" style="background: #f3e5f5;">Box 5</div>
-                </div>
-                <!-- Duplicated 5 items for infinite effect -->
-                <div class="carousel-item">
-                    <div class="carousel-box" style="background: #ffebee;">Box 1</div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-box" style="background: #e3f2fd;">Box 2</div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-box" style="background: #e8f5e9;">Box 3</div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-box" style="background: #fff3e0;">Box 4</div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-box" style="background: #f3e5f5;">Box 5</div>
-                </div>
+            <div class="carousel" id="carousel">
+                <!-- Images will be added dynamically via JavaScript -->
+            </div>
+            <div class="carousel-indicators" id="carousel-indicators">
+                <!-- Indicators will be added dynamically via JavaScript -->
             </div>
         </div>
     </section>
 
+    <section class="integrity-content">
+        <div class="integrity-heading">
+            <p class="heading-para"><span>Integrity</span> is our Second Name</h1>
+            <p class="integrity-para">Trusted by over X leading healthcare services</p>
+        </div>
+        <div class="row-of-circles">
+            <div class="circle-container">
+                <div class="circle"></div>
+                <p class="roc-text">name 1</p>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+                <p class="roc-text">name 2</p>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+                <p class="roc-text">name 3</p>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+                <p class="roc-text">name 4</p>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+                <p class="roc-text">name 5</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-goal-section">
+        <div class="our-goal-text">
+            <h1 class="our-goal-heading">Our Goal</h1>
+            <p class="our-goal-para"></p>
+        </div>
+        <div class="our-goal-image"></div>
+    </section>
+
     <script>
         const navLinks = document.querySelectorAll('.navbar a');
-        const hoverBg = document.querySelector('.hover-bg');
-        const activeLink = document.querySelector('.navbar a.active');
-        const carousel = document.querySelector('.carousel');
-        const itemWidth = 60; // 50vw box + 10vw gap in vw
-        const originalItems = 5;
-        let translateX = -95; // Adjusted to center 3rd box symmetrically
+        const navbar = document.querySelector('.navbar');
+        const underline = document.querySelector('.navbar .underline');
 
-        // Navbar hover effect
-        function setHoverBg(element) {
-            hoverBg.style.width = `${element.offsetWidth}px`;
-            hoverBg.style.left = `${element.offsetLeft}px`;
-        }
-
-        setHoverBg(activeLink);
-
-        navLinks.forEach(link => {
-            link.addEventListener('mouseenter', () => {
-                setHoverBg(link);
-            });
-
-            link.addEventListener('mouseleave', () => {
-                if (!link.classList.contains('active')) {
-                    setHoverBg(activeLink);
+        function updateUnderline() {
+            const activeLink = document.querySelector('.navbar a.active');
+            if (activeLink) {
+                const isLastChild = activeLink === navLinks[navLinks.length - 1];
+                if (isLastChild) {
+                    underline.style.display = 'none';
+                } else {
+                    underline.style.display = 'block';
+                    const linkRect = activeLink.getBoundingClientRect();
+                    const navbarRect = navbar.getBoundingClientRect();
+                    const translateX = linkRect.left - navbarRect.left + (linkRect.width - 38) / 2;
+                    underline.style.transform = `translateX(${translateX}px)`;
+                    underline.style.left = `${translateX * 0.03}px`
                 }
-            });
-
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                navLinks.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-                setHoverBg(link);
-            });
-        });
-
-        // Carousel shift
-        function shiftCarousel() {
-            translateX -= itemWidth; // Shift left by one item
-            carousel.style.transform = `translateX(${translateX}vw)`;
-
-            // Reset when reaching the end of original items
-            if (Math.abs(translateX) >= itemWidth * originalItems) {
-                setTimeout(() => {
-                    carousel.style.transition = 'none';
-                    translateX = 0; // Reset to start
-                    carousel.style.transform = `translateX(${translateX}vw)`;
-                    void carousel.offsetWidth; // Trigger reflow
-                    carousel.style.transition = 'transform 1s ease-in-out';
-                }, 1000); // Match transition duration
             }
         }
 
-        // Shift every 5 seconds
-        setInterval(shiftCarousel, 5000);
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                requestAnimationFrame(() => {
+                    updateUnderline();
+                });
+            });
+        });
+
+        window.addEventListener('load', updateUnderline);
+        window.addEventListener('resize', updateUnderline);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Configuration
+            const images = [
+                'https://picsum.photos/id/1015/800/600', // Mountain
+                'https://picsum.photos/id/1016/800/600', // Forest
+                'https://picsum.photos/id/1018/800/600', // Stream
+                'https://picsum.photos/id/1019/800/600', // Architecture
+                'https://picsum.photos/id/1021/800/600'  // Nature
+            ];
+            
+            // DOM elements
+            const carousel = document.getElementById('carousel');
+            const indicators = document.getElementById('carousel-indicators');
+            
+            // Carousel state
+            let currentIndex = 0;
+
+            // Create carousel items and indicators
+            function createCarousel() {
+                images.forEach((src, index) => {
+                    // Create carousel item
+                    const item = document.createElement('div');
+                    item.className = 'carousel-item';
+                    
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = `Image ${index + 1}`;
+                    
+                    item.appendChild(img);
+                    carousel.appendChild(item);
+
+                    // Add click event listener to each item
+                    item.addEventListener('click', () => {
+                        currentIndex = index;
+                        updateCarousel(currentIndex);
+                    });
+
+                    // Create indicator
+                    const indicator = document.createElement('div');
+                    indicator.className = 'carousel-indicator';
+                    indicators.appendChild(indicator);
+                });
+                
+                // Initial update
+                updateCarousel(0);
+                
+                // Force a second update after a slight delay to ensure all styles are applied
+                setTimeout(() => {
+                    updateCarousel(0);
+                }, 100);
+                
+                // Start auto-rotation every 5 seconds
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    updateCarousel(currentIndex);
+                }, 5000);
+            }
+            
+            // Update carousel to show correct 3 images and update indicators
+            function updateCarousel(centerIndex) {
+                const items = document.querySelectorAll('.carousel-item');
+                const dots = document.querySelectorAll('.carousel-indicator');
+                const viewportWidth = window.innerWidth;
+                
+                // Reset all items
+                items.forEach(item => {
+                    item.style.transform = 'scale(0) translateZ(-5000px)';
+                    item.style.opacity = '0';
+                    item.style.zIndex = '0';
+                    item.style.display = 'none';
+                });
+
+                // Reset all indicators
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+                
+                // Calculate indices for visible items
+                const totalItems = items.length;
+                const farLeftIndex = (centerIndex - 2 + totalItems) % totalItems;
+                const prevIndex = (centerIndex - 1 + totalItems) % totalItems;
+                const nextIndex = (centerIndex + 1) % totalItems;
+                const farRightIndex = (centerIndex + 2) % totalItems;
+                
+                // Calculate positions based on viewport size
+                // Decrease the spacing between images
+                const sideTranslateX = viewportWidth * 0.46;  // Decreased spacing
+                
+                // Make sure all five visible items are displayed
+                items[farLeftIndex].style.display = 'block';
+                items[prevIndex].style.display = 'block';
+                items[centerIndex].style.display = 'block';
+                items[nextIndex].style.display = 'block';
+                items[farRightIndex].style.display = 'block';
+                
+                // Position the far left item - move it further to the left and outside the screen
+                items[farLeftIndex].style.transform = `translateX(-${sideTranslateX * 2}px) translateZ(-600px) rotateY(0deg)`;
+                items[farLeftIndex].style.opacity = '0';
+                items[farLeftIndex].style.height = 'min(45vh, 400px)';
+                items[farLeftIndex].style.zIndex = '0';
+                
+                // Position the prev item - far left with less spacing and decreased height
+                items[prevIndex].style.transform = `translateX(-${sideTranslateX}px) translateZ(-400px) rotateY(50deg) scale(0.95)`;
+                items[prevIndex].style.opacity = '0.7';
+                items[prevIndex].style.height = 'min(45vh, 400px)';
+                items[prevIndex].style.zIndex = '1';
+                
+                // Position the center (active) item with decreased height and scale to align edges
+                items[centerIndex].style.transform = 'translateZ(400px) scale(1)';  // Further decreased scale
+                items[centerIndex].style.height = '210px';
+                items[centerIndex].style.opacity = '1';
+                items[centerIndex].style.zIndex = '3';
+                
+                // Position the next item - far right with less spacing and decreased height
+                items[nextIndex].style.transform = `translateX(${sideTranslateX}px) translateZ(-400px) rotateY(-50deg) scale(0.95)`;
+                items[nextIndex].style.opacity = '0.7';
+                items[nextIndex].style.height = 'min(45vh, 400px)';
+                items[nextIndex].style.zIndex = '1';
+                
+                // Position the far right item - move it further to the right and outside the screen
+                items[farRightIndex].style.transform = `translateX(${sideTranslateX * 2}px) translateZ(-600px) rotateY(0deg)`;
+                items[farRightIndex].style.opacity = '0';
+                items[farRightIndex].style.height = 'min(45vh, 400px)';
+                items[farRightIndex].style.zIndex = '0';
+
+                // Activate the current indicator
+                dots[centerIndex].classList.add('active');
+            }
+            
+            // Handle window resize to ensure carousel adapts to screen size
+            window.addEventListener('resize', () => {
+                updateCarousel(currentIndex);
+            });
+            
+            // Initialize
+            createCarousel();
+            
+            // Log information as requested
+            console.log("Current Date and Time (UTC): 2025-04-01 10:41:09");
+            console.log("Current User's Login: kisnaxd-png");
+        });
     </script>
 </body>
 </html>
