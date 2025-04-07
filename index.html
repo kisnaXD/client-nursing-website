@@ -3,59 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Card Example</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #fff8f1;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .card {
-            background-color: white;
-            border-right: 10px solid #7f3ff2;
-            border-bottom: 10px solid #7f3ff2;
-            border-left: 4px solid #7f3ff2;
-            border-top: 4px solid #7f3ff2;
-            border-radius: 10px;
-            width: 250px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .circle {
-            width: 50px;
-            height: 50px;
-            background-color: #dcdcdc;
-            border-radius: 50%;
-            margin: 0 auto 15px;
-        }
-
-        h3 {
-            color: #7f3ff2;
-            font-size: 1.2em;
-            margin: 0 0 15px;
-        }
-
-        p {
-            color: #4a4a4a;
-            font-size: 0.9em;
-            line-height: 1.5;
-            margin: 0;
-        }
-    </style>
+    <title>Care Bridge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@300;400&family=Instrument+Serif:wght@300;400&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="card">
-        <div class="circle"></div>
-        <h3>Community</h3>
-        <p>We believe in the power of collaboration, building a community where individuals support each other in achieving their goals and growing together, proving the strength of collective purpose.</p>
-    </div>
+    <div class="logo"></div>
+    <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Impact</a>
+        <a href="#">Social Care</a>
+        <a id="artemisID" href="#"><div class="artemis">Artemis Partnership</div></a>
+        <span class="underline"></span>
+    </nav>
+
+    <section class="hero">
+        <div class="heading-container">
+            <h1><span>Bridging</span> care providers<br>and care seekers</h1>
+            <div class="hero-bg-logo"></div>
+            <button class="inquire-button"><span>Inquire now</span></button>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel" id="carousel">
+                <!-- Images will be added dynamically via JavaScript -->
+            </div>
+            <div class="carousel-indicators" id="carousel-indicators">
+                <!-- Indicators will be added dynamically via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section class="integrity-content">
+        <div class="integrity-heading">
+            <p class="heading-para"><span>Integrity</span> is our Second Name</h1>
+            <p class="integrity-para">Trusted by over X leading healthcare services</p>
+        </div>
+        <div class="row-of-circles">
+            <div class="circle-container">
+                <div class="roc-circle"></div>
+                <p class="roc-text">name 1</p>
+            </div>
+            <div class="circle-container">
+                <div class="roc-circle"></div>
+                <p class="roc-text">name 2</p>
+            </div>
+            <div class="circle-container">
+                <div class="roc-circle"></div>
+                <p class="roc-text">name 3</p>
+            </div>
+            <div class="circle-container">
+                <div class="roc-circle"></div>
+                <p class="roc-text">name 4</p>
+            </div>
+            <div class="circle-container">
+                <div class="roc-circle"></div>
+                <p class="roc-text">name 5</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-goal-section">
+        <div class="our-goal-text">
+            <h1 class="our-goal-heading">Our Goal</h1>
+            <p class="our-goal-para">We are changemakers on a mission to create career pathways that empower individuals to chase their dreams. By bridging skill gaps and fostering interpersonal and cultural readiness, we equip professionals to thrive in dynamic markets - locally or globally<br> <br>Rooted in a value-driven, ethical approach, we go beyond education—preparing learners for transformative career growth while driving positive change in their communities.            </p>
+            <button class="download-button"><span>Download Brochure</span></button>
+        </div>
+        <img src="./assets/our-goal.png" class="our-goal-image"/>
+    </section>
+
+    <section class="challenges-section">
+        <p class="challenges-heading"><span>Challenges</span> We Solve</p>
+        <div class="challenges-bottom">
+            <div class="challenge-container">
+                <img class="challenge-image" src="./assets/challenge-1.png" />
+                <p class="challenge-text">
+                    <span>Value-Based Talent Sourcing</span><br><br>
+                    We ethically source skilled talent, ensuring alignment with the values and expectations of our employer partners creating a foundation of trust  and integrity.
+                </p>
+            </div>
+            <div class="challenge-container">
+                <img class="challenge-image" src="./assets/challenge-2.png" />
+                <p class="challenge-text">
+                    <span>Specialized Training & Upskilling</span><br><br>
+                    Our specialized training programs address industry-specific skill gaps, language proficiency, and cultural preparation. By partnering with top-tier faculty and facilities, we ensure individuals fully meet their employers’ expectations.
+                </p>
+            </div>
+            <div class="challenge-container">
+                <img class="challenge-image" src="./assets/challenge-3.png" />
+                <p class="challenge-text">
+                    <span>Bridging Talent with Opportunity</span><br><br>
+                    We carefully match our candidates with employers based on shared values, specific job skills, and qualifications. We maintain fair, legal, and transparent hiring, safeguarding both
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials-section">
+        <div class="testimonial-row-1">
+            <img src="./assets/testimonial_1.png" class="normal-testimonial-1"/>
+            <img src="./assets/testimonial_2.png" class="normal-testimonial-2"/>
+        </div>
+        <div class="testimonial-row-2">
+            <img src="./assets/testimonial_3.png" class="normal-testimonial-3"/>
+            <div class="testimonial-heading-container">
+                <span class="testimonial-heading">Testimonials</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-section">
+        <div class="trust-heading-container">
+            <p class="trust-heading">Why you can <span>Trust</span> us</p>
+            <p class="trust-byline">Our values are what seperates us from the crowd</p>
+        </div>
+        <div class="trust-bottom">
+            <div class="trust-bottom-box">
+                <div class="circle"></div>
+                <p class="trust-card-heading">Intrgity & Ethics</p>
+                <p class="trust-card-para">We uphold the highest standards of honesty, transparency, and fairness in all we do, fostering trust and accountability in our relationships with learners, partners, employees, and communities.</p>
+            </div>
+            <div class="trust-bottom-box">
+                <div class="circle"></div>
+                <p class="trust-card-heading">Empowerment</p>
+                <p class="trust-card-para">We embrace diversity and provide resources and opportunities for individuals from all backgrounds to reach their full potential, build meaningful careers, and contribute to a brighter, more sustainable future. </p>
+            </div>
+            <div class="trust-bottom-box">
+                <div class="circle"></div>
+                <p class="trust-card-heading">Innovation & Excellence</p>
+                <p class="trust-card-para">We thrive on creativity and forward-thinking, delivering cutting-edge solutions that meet the evolving needs of learners, industries & societies alike. </p>
+            </div>
+            <div class="trust-bottom-box" id="special-bottom-box">
+                <div class="circle"></div>
+                <p class="trust-card-heading" id="special-para">Community</p>
+                <p class="trust-card-para">We believe in the power of collaboration, building a community where individuals support each other in achieving their goals and growing together, proving the strength of collective purpose.</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact-us-section">
+        <div class="contact-us-heading-container">
+            <p class="contact-us-heading">Contact Us</p>
+            <p class="contact-us-byline">Have Questions or want to learn more about our services?  <br>Reach out to us & we’ll get back to you as soon as possible</p>
+        </div>
+        <div class="contact-us-form">
+            <div class="contact-us-box1">
+                <div class="contact-us-left">
+                    <p class="contact-us-box1-heading">We would love to hear from you :)</p>
+                    <div class="contacts">
+                        <div class="single-contact">
+                            <div class="contact-circle"></div>
+                            <div class="contact-header">
+                                <p class="contact-header-big">Write to Us</p>
+                                <p class="contact-header-mail">xyz@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="single-contact">
+                            <div class="contact-circle"></div>
+                            <div class="contact-header">
+                                <p class="contact-header-big">Whatsapp</p>
+                                <p class="contact-header-mail">+91 5887455788 +91 5887455788</p>
+                            </div>
+                        </div>
+                        <div class="single-contact">
+                            <div class="contact-circle"></div>
+                            <div class="contact-header">
+                                <p class="contact-header-big">Call Us</p>
+                                <p class="contact-header-mail">+91 5887455788</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-us-right">
+                    <div class="smaller-circle"></div>
+                    <div class="smaller-circle"></div>
+                    <div class="smaller-circle"></div>
+                    <div class="smaller-circle"></div>
+                    <div class="smaller-circle"></div>
+                </div>
+            </div>
+            <div class="contact-us-box2">
+                <input type="text" class="text-input-contact" placeholder="Name" />
+                <div class="email-and-phone-number">
+                    <input type="text" class="text-input-contact-row" placeholder="Email" id="email"/>
+                    <input type="text" class="text-input-contact-row" placeholder="Phone" id="phone"/>
+                </div>
+                <div class="city-and-state">
+                    <div class="city-input"></div>
+                    <div class="state-input"></div>
+                </div>
+                <input type="text" class="text-input-contact" placeholder="Select I am a" />
+                <div class="submit-button-contact">
+                    Submit
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer-section"></section>
+    <script src="script.js"></script>
 </body>
 </html>
