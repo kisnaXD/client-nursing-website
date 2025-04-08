@@ -99,6 +99,7 @@ body {
 
 .hero {
     min-height: 100vh;
+    width: 100%;
     padding-top: 100px;
     display: flex;
     flex-direction: column;
@@ -239,13 +240,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     z-index: 0;
 }
 
 .carousel {
     position: relative;
     width: 100%;
-    height: 70%; /* Adjust height to leave space for dots */
+    height: auto; /* Adjust height to leave space for dots */
     transform-style: preserve-3d;
     display: flex;
     justify-content: center;
@@ -254,7 +256,7 @@ body {
 
 .carousel-item {
     position: absolute;
-    width: min(40vw, 500px);  /* Reduced width */
+    width: min(90%, 450px);  /* Reduced width */
     height: min(45vh, 350px);  /* Increased height */
     background-color: #fff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
@@ -822,4 +824,119 @@ body {
 .footer-section {
     height: 500px;
     background-color: rgba(255,213, 143, 0.7)
+}
+
+/* Hamburger menu */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 24px;
+    right: 20px; /* Adjusted from 5vw to 20px */
+    z-index: 20;
+    width: 30px; /* Add width */
+    height: 30px; /* Add height */
+}
+.sidebar {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    right: -250px; /* Start off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    z-index: 30;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    transition: right 0.3s ease; /* Slide-in transition */
+}
+
+.sidebar.show {
+    right: 0; /* Slide in */
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    transition: background 0.3s ease;
+}
+
+.sidebar a:hover {
+    background: #f1f1f1;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .navbar {
+        display: none; /* Hide navbar */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu */
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        line-height: 50px;
+    }
+
+    .carousel-item {
+        width: min(60vw, 300px); /* Adjusted width for smaller screens */
+        height: min(30vh, 200px); /* Adjusted height for smaller screens */
+    }
+
+    .carousel-indicators {
+        gap: 10px; /* Reduce space between dots */
+    }
+
+    .heading-container {
+        top: 10%; /* Adjust heading position */
+    }
+
+    .inquire-button {
+        margin-bottom: 20px; /* Reduce gap below button */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem;
+        line-height: 40px;
+    }
+
+    .carousel-item {
+        width: min(80vw, 250px); /* Adjusted width for smaller screens */
+        height: min(25vh, 150px); /* Adjusted height for smaller screens */
+    }
+
+    .carousel-indicators {
+        gap: 5px; /* Reduce space between dots */
+    }
+
+    .heading-container {
+        top: 8%; /* Adjust heading position */
+    }
+
+    .inquire-button {
+        margin-bottom: 10px; /* Reduce gap below button */
+    }
+
+    section:not(.hero) {
+        display: none;
+    }
 }
