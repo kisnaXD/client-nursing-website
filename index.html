@@ -8,39 +8,45 @@
     <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="logo"></div>
-    <nav class="navbar">
-        <a href="#" class="active">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Impact</a>
-        <a href="#">Social Care</a>
-        <a id="artemisID" href="#"><div class="artemis">Artemis Partnership</div></a>
-        <span class="underline"></span>
-    </nav>
-    <div class="hamburger-menu" id="hamburger-menu">
-        &#9776;
+    <div class="navbar-div">
+        <div class="logo">
+            <img class="logo-img" src="./assets/bg_logo.png"/>
+        </div>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Impact</a>
+            <a href="#">Social Care</a>
+            <a id="artemisID" href="#"><div class="artemis">Artemis Partnership</div></a>
+            <span class="underline"></span>
+        </nav>
+        <div class="hamburger-menu" id="hamburger-menu">
+            &#9776;
+        </div>
     </div>
     <div class="sidebar" id="sidebar">
+        <span class="closebtn" id="closebtn">&times;</span>
         <a href="#" class="active">Home</a>
         <a href="#">Services</a>
         <a href="#">Impact</a>
         <a href="#">Social Care</a>
-        <a id="artemisID" href="#"><div class="artemis">Artemis Partnership</div></a>
-        <span class="underline"></span>
+        <a href="#">Artemis Partnership</a>
+        <div class="bottom-content">
+            <img src="./assets/bg_logo.png" alt="Logo">
+            <p>Ed2Careers</p>
+        </div>
     </div>
 
     <section class="hero">
         <div class="heading-container">
             <h1><span>Bridging</span> care providers<br>and care seekers</h1>
-            <div class="hero-bg-logo"></div>
+            <img class="hero-bg-logo" src="assets/bg_logo.png">
             <button class="inquire-button"><span>Inquire now</span></button>
         </div>
         <div class="carousel-container">
             <div class="carousel" id="carousel">
-                <!-- Images will be added dynamically via JavaScript -->
             </div>
             <div class="carousel-indicators" id="carousel-indicators">
-                <!-- Indicators will be added dynamically via JavaScript -->
             </div>
         </div>
     </section>
@@ -129,29 +135,33 @@
             <p class="trust-byline">Our values are what seperates us from the crowd</p>
         </div>
         <div class="trust-bottom">
-            <div class="trust-bottom-box">
-                <div class="circle"></div>
-                <p class="trust-card-heading">Intrgity & Ethics</p>
-                <p class="trust-card-para">We uphold the highest standards of honesty, transparency, and fairness in all we do, fostering trust and accountability in our relationships with learners, partners, employees, and communities.</p>
+            <div class=trust-div-1>
+                <div class="trust-bottom-box">
+                    <div class="circle"></div>
+                    <p class="trust-card-heading">Intrgity & Ethics</p>
+                    <p class="trust-card-para">We uphold the highest standards of honesty, transparency, and fairness in all we do, fostering trust and accountability in our relationships with learners, partners, employees, and communities.</p>
+                </div>
+                <div class="trust-bottom-box">
+                    <div class="circle"></div>
+                    <p class="trust-card-heading">Empowerment</p>
+                    <p class="trust-card-para">We embrace diversity and provide resources and opportunities for individuals from all backgrounds to reach their full potential, build meaningful careers, and contribute to a brighter, more sustainable future. </p>
+                </div>
             </div>
-            <div class="trust-bottom-box">
-                <div class="circle"></div>
-                <p class="trust-card-heading">Empowerment</p>
-                <p class="trust-card-para">We embrace diversity and provide resources and opportunities for individuals from all backgrounds to reach their full potential, build meaningful careers, and contribute to a brighter, more sustainable future. </p>
-            </div>
-            <div class="trust-bottom-box">
-                <div class="circle"></div>
-                <p class="trust-card-heading">Innovation & Excellence</p>
-                <p class="trust-card-para">We thrive on creativity and forward-thinking, delivering cutting-edge solutions that meet the evolving needs of learners, industries & societies alike. </p>
-            </div>
-            <div class="trust-bottom-box" id="special-bottom-box">
-                <div class="circle"></div>
-                <p class="trust-card-heading" id="special-para">Community</p>
-                <p class="trust-card-para">We believe in the power of collaboration, building a community where individuals support each other in achieving their goals and growing together, proving the strength of collective purpose.</p>
+            <div class="trust-div-2">
+                <div class="trust-bottom-box">
+                    <div class="circle"></div>
+                    <p class="trust-card-heading">Innovation & Excellence</p>
+                    <p class="trust-card-para">We thrive on creativity and forward-thinking, delivering cutting-edge solutions that meet the evolving needs of learners, industries & societies alike. </p>
+                </div>
+                <div class="trust-bottom-box" id="special-bottom-box">
+                    <div class="circle"></div>
+                    <p class="trust-card-heading" id="special-para">Community</p>
+                    <p class="trust-card-para">We believe in the power of collaboration, building a community where individuals support each other in achieving their goals and growing together, proving the strength of collective purpose.</p>
+                </div>
             </div>
         </div>
     </section>
-    <section class="contact-us-section">
+     <section class="contact-us-section">
         <div class="contact-us-heading-container">
             <p class="contact-us-heading">Contact Us</p>
             <p class="contact-us-byline">Have Questions or want to learn more about our services?  <br>Reach out to us & we’ll get back to you as soon as possible</p>
