@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 2px solid red;
 }
 
 .trust-div-1, .trust-div-2 {
@@ -17,7 +16,7 @@
 body {
     font-family: "Instrument Sans", sans-serif;
     overflow-x: hidden;
-    background: linear-gradient(to bottom, #ffcc80 0%, #ffffff 20%);
+    background: linear-gradient(to bottom, #ffcc80 0%, #ffffff 10%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -122,7 +121,9 @@ body {
 
 .footer-section {
     height: 500px;
-    background-color: rgba(255,213, 143, 0.7)
+    background-color: rgba(255,213, 143, 0.7);
+    width: 100%;
+    margin-top: 100px;
 }
 
 .hamburger-menu {
@@ -197,9 +198,317 @@ body {
     font-size: 20px;
 }
 
+.hero-left-paragraph {
+    font-size: 20px;
+}
+
 .content {
     margin-left: 200px;
     padding: 16px;
+}
+
+.hero-section {
+    margin-top: 40px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: auto;
+    gap: 5%;
+}
+
+.hero-left-text {
+    width: 45%;
+}
+
+.hero-right-text {
+    border-radius: 10px;
+    height: 600px;
+    width: 45%;
+    background-color: #d9d9d9;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}
+
+.hero-left-headings {
+    font-size: 60px;
+    font-family: "Instrument Serif", sans-serif;
+    color: #403219;
+    font-style: italic;
+    margin-bottom: 50px;
+    margin-left: -10px;
+}
+
+.hero-left-headings span {
+    font-family: "Instrument Sans", sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+.connect-button {
+    font-size: 20px;
+    font-family: "Instrument Sans", sans-serif;
+    color: #ffeac8;
+    background-color: #8A6EFF;
+    width: auto;
+    padding: 8px 12px;
+    width: 180px;
+    text-align: center;
+    border-radius: 30px;
+    margin: 20px 0;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.connect-button:hover {
+    color: #8A6EFF;
+    background-color: #ffeac8;
+}
+
+.courses-section {
+    margin-top: 50px;
+    height: auto;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.courses-heading {
+    margin-bottom: 30px;
+    font-family: "Instrument Serif", sans-serif;
+    color: #8A6EFF;
+    font-style: italic;
+    font-size: 60px;
+}
+
+.courses-bottom {
+    display: flex;
+    height: auto;
+    width: 86vw;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1%;
+}
+
+.courses-container-1, .courses-container-2, .courses-container-3 {
+    height: 500px;
+    width: 30%;
+    border: 4px solid rgba(255,178, 53, 0);
+    background-color: rgba(255,234,200,0);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.65s ease-in-out;
+}
+
+.courses-container-1:hover, .courses-container-2:hover, .courses-container-3:hover {
+    border: 4px solid rgba(255,178, 53, 1);
+    background-color: rgba(255,234,200,1);
+}
+
+.courses-container-1:hover .arrow-button {
+    transform: rotate(40deg);
+}
+
+.courses-container-2:hover .arrow-button {
+    transform: rotate(40deg);
+}
+
+.courses-container-3:hover .arrow-button {
+    transform: rotate(40deg);
+}
+
+.courses-container-1:hover #ab-1 svg path {
+    transition: stroke 0.65s ease-in-out;
+}
+
+.courses-container-1:hover #ab-1 svg path {
+    stroke: #ffeac8;
+}
+
+.courses-container-2:hover #ab-2 {
+    background-color: #8A6EFF;
+    color: #ffeac8;
+}
+
+.courses-container-2:hover #ab-2 svg path {
+    transition: stroke 0.65s ease-in-out;
+}
+
+.courses-container-2:hover #ab-2 svg path {
+    stroke: #ffeac8;
+}
+
+.courses-container-2:hover #ab-2 {
+    background-color: #8A6EFF;
+    color: #ffeac8;
+}
+
+.courses-container-3:hover #ab-3 svg path {
+    transition: stroke 0.65s ease-in-out;
+}
+
+.courses-container-3:hover #ab-3 svg path {
+    stroke: #ffeac8;
+}
+
+.courses-container-3:hover #ab-3 {
+    background-color: #8A6EFF;
+    color: #ffeac8;
+}
+
+.courses-image {
+    width: 85%;
+    height: 280px;
+}
+
+.courses-container-text {
+    margin-top: 15px;
+    height: auto;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.heading-with-button {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+}
+
+.courses-container-text-heading {
+    font-size: 21px;
+    font-family: "Instrument Sans", sans-serif;
+    color: #403219;
+    font-weight: bolder;
+    margin-bottom: 6px;
+}
+
+.courses-container-text-paragraph {
+    font-size: 16px;
+}
+
+.arrow-button {
+    width: 35px;
+    height: 35px;
+    background-color: #ffeac8;
+    border-radius: 100%;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.65s ease-in-out;
+}
+
+.separation-section {
+    height: auto;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.separation-header {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.separation-heading {
+    font-size: 60px;
+    font-family: "Instrument Serif", sans-serif;
+    color: #8A6EFF;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.separation-heading span {
+    color: #ffcc80;
+}
+
+.separation-paragraph {
+    width: 60%;
+    font-size: 16px;
+    color: #403219;
+    text-align: center;
+}
+
+.separation-bottom {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    gap: 150px;
+    width: 90vw;
+}
+
+.grid-item {
+    height: 300px;
+    width: calc(100%-300px);
+    position: relative;
+    border-radius: 10px;
+    background-color: white; /* Ensure the background color is applied */
+    padding: 12px;
+    overflow: hidden; /* Ensure content respects the border radius */
+    border: 5px solid transparent; /* Necessary for consistent border radius */
+    box-shadow: 
+        2px 2px 0 7px #8A6EFF, /* Outer border */
+        0px 0px 0 -8px #8A6EFF, /* Right and bottom border */
+        0px 0px 0 0px #8A6EFF inset; /* Inner border to cover gaps */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-circle {
+    height: 60px;
+    width: 60px;
+    background-color: #d9d9d9;
+    border-radius: 100%;
+}
+
+.grid-item-heading {
+    font-size: 24px;
+    color: #8A6EFF;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: bold;
+}
+
+.grid-item-paragraph {
+    font-size: 18px;
+    color: #403219;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: normal;
+    width: 100%;
+}
+
+@media screen and (max-width: 1023px){
+    .separation-bottom {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        grid-template-rows: repeat(3, auto); /* 3 rows */
+    }
+}
+
+/* Mobile: 1 column, 6 rows */
+@media screen and (max-width: 599px) {
+    .separation-bottom {
+        grid-template-columns: 1fr; /* 1 column */
+        grid-template-rows: repeat(6, auto); /* 6 rows */
+    }
 }
 
 @media screen and (max-width: 1024px) {

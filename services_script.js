@@ -57,4 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('glow');
         }
     });
+
+    const abi1 = document.getElementById('abi-1');
+    abi1.addEventListener('mouseover', () => {
+        abi1.src = './assets/golden_diagonal_arrow.svg';
+    })
 });
