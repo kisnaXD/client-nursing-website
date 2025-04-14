@@ -58,8 +58,85 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const abi1 = document.getElementById('abi-1');
-    abi1.addEventListener('mouseover', () => {
-        abi1.src = './assets/golden_diagonal_arrow.svg';
-    })
+    function isMobile() {
+        return window.matchMedia("(max-width: 767px)").matches;
+    }
+
+    if (isMobile()) {
+        const item1 = document.querySelector(".courses-container-1");
+        const arrow1 = document.getElementById("ab-1");
+        const observer1 = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate-on-scroll");
+                arrow1.classList.add("color-on-scroll");
+                arrow1.classList.add("rotate-on-scroll");
+                arrow1.style.backgroundColor = "#8a6eff";
+              } else {
+                entry.target.classList.remove("animate-on-scroll");
+                arrow1.classList.remove("color-on-scroll");
+                arrow1.classList.remove("rotate-on-scroll");
+                arrow1.style.backgroundColor = "#ffeac8";
+              }
+            });
+          },
+          {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.1,
+          }
+        );
+        const item2 = document.querySelector(".courses-container-2");
+        const arrow2 = document.getElementById("ab-1");
+        const observer2 = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate-on-scroll");
+                arrow2.classList.add("color-on-scroll");
+                arrow2.classList.add("rotate-on-scroll");
+                arrow2.style.backgroundColor = "#8a6eff";
+              } else {
+                entry.target.classList.remove("animate-on-scroll");
+                arrow2.classList.remove("color-on-scroll");
+                arrow2.classList.remove("rotate-on-scroll");
+                arrow2.style.backgroundColor = "#ffeac8";
+              }
+            });
+          },
+          {
+            root: null, 
+            rootMargin: "0px", 
+            threshold: 0.1, 
+          }
+        );
+        const item3 = document.querySelector(".courses-container-3");
+        const arrow3 = document.getElementById("ab-1");
+        const observer3 = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate-on-scroll");
+                arrow3.classList.add("color-on-scroll");
+                arrow3.classList.add("rotate-on-scroll");
+                arrow3.style.backgroundColor = "#8a6eff";
+              } else {
+                entry.target.classList.remove("animate-on-scroll");
+                arrow3.classList.remove("color-on-scroll");
+                arrow3.classList.remove("rotate-on-scroll");
+                arrow3.style.backgroundColor = "#ffeac8";
+              }
+            });
+          },
+          {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.1,
+          }
+        );
+        observer1.observe(item1)
+        observer3.observe(item3);
+        observer2.observe(item2);
+    }
 });
