@@ -24,10 +24,14 @@ link.addEventListener('click', function(e) {
     e.preventDefault();
     navLinks.forEach(l => l.classList.remove('active'));
     this.classList.add('active');
-    console.log(this)
     if(this.innerText === "Services") {
-        console.log(this.innerText)
         window.location.href = "services.html";
+    } 
+    if(this.innerText === "Artemis Partnership") {
+        window.location.href = "artemis.html";
+    } 
+    if(this.innerText === "Home") {
+        window.location.href = "index.html"
     }
     requestAnimationFrame(() => {
         updateUnderline();

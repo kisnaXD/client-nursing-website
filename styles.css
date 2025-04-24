@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .trust-div-1, .trust-div-2 {
@@ -11,12 +12,14 @@
     width: auto;
     height: auto;
     gap: 50px;
+    overflow-x: visible;
+    overflow-y: visible;
 }
 
 body {
     font-family: "Instrument Sans", sans-serif;
     overflow-x: hidden;
-    background: linear-gradient(to bottom, #ffcc80 0%, #ffffff 20%);
+    background: linear-gradient(to bottom, #ffcc80 0%, #ffffff 18%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -58,6 +61,7 @@ body {
     position: relative;
     height: 100%;
     transition: top 1.5s ease;
+    overflow: visible;
 }
 
 .navbar:has(a.active) .artemis {
@@ -91,6 +95,7 @@ body {
     align-items: center;
     padding: 16px;
     margin: -16px -24px;
+    overflow-y: visible;
 }
 
 .navbar a:last-child.active + .underline {
@@ -130,6 +135,7 @@ body {
     align-items: center;
     text-align: center;
     position: relative;
+    overflow: visible;
 }
 
 .heading-container {
@@ -139,6 +145,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: visible;
 }
 
 .hero h1 {
@@ -147,14 +154,18 @@ body {
     color: #333;
     margin-bottom: 30px;
     font-family: "Instrument Sans", sans-serif;
-    z-index: 10;
+    z-index: 10000;
     line-height: 80px;
+    font-weight: 500;
+    letter-spacing: -2.5px;
+    overflow: visible;
 }
 
 .hero h1 span {
     font-family: "Instrument Serif", serif;
-    font-weight: 300;
+    font-weight: 200;
     font-style: italic;
+    letter-spacing: -2.5px;
 }
 
 .hero-bg-logo {
@@ -193,7 +204,6 @@ body {
 .download-button span {
     display: inline-block;
     transition: transform 0.8s ease;
-    position: relative;
     z-index: 3;
 }
 
@@ -278,6 +288,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: visible;
 }
 
 .carousel-item {
@@ -298,6 +309,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    overflow-x:visible;
 }
 
 .carousel-indicators {
@@ -334,6 +346,7 @@ body {
 .content-section h2 {
     font-family: "Instrument Serif", serif;
     font-style: italic;
+    letter-spacing: -2.5px;
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
@@ -357,6 +370,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100vw;
+    height: auto;
+    background: linear-gradient(to top right, #ffcc80 -40%, white 18%);
 }
 
 .integrity-para {
@@ -365,20 +381,24 @@ body {
     margin-top: 10px;
     width: 100%;
     text-align: center;
+    overflow-x: visible;
+    overflow: visible;
 }
 
 .heading-para {
-    color: #ffcc80;
+    color: #8A6EFF;
     font-family: "Instrument Serif", sans-serif;
     font-weight: 300;
-    width: 100%;
+    width: 100vw;
     text-align: center;
-    font-size: 60px;
+    font-size: 70px;
+    z-index: 1000000000;
     font-style: italic;
+    letter-spacing: -2.5px;
 }
 
 .heading-para span {
-    color: #8A6EFF;
+    color: #ffcc80;
 }
 
 .row-of-circles {
@@ -404,6 +424,12 @@ body {
     border-radius: 100%;
 }
 
+.gradient-back {
+    height: auto;
+    width: 100vw;
+    background: linear-gradient(to right, #ffcc80 -50%, white 25%);
+}
+
 .our-goal-section {
     display: flex;
     justify-content: center;
@@ -411,6 +437,8 @@ body {
     width: 90vw;
     gap: 5vw;
     margin: 100px 5vw;
+    overflow-x: visible;
+    overflow: visible;
 }
 
 .our-goal-text {
@@ -420,18 +448,23 @@ body {
     justify-content: center;
     width: 40%;
     margin-top: 5px;
+    overflow-x: visible;
+    overflow: visible;
 }
 
 .our-goal-heading {
-    font-size: 60px;
+    font-size: 70px;
     color: #8A6EFF;
     font-family: "Instrument Serif", sans-serif;
     font-style: italic;
+    letter-spacing: -2.5px;
     font-weight: 200;
     width: 100%;
     align-self: flex-end;
     margin-right: 8px;
     margin-bottom: 10px;
+    overflow-x: visible;
+    overflow: visible;
 }
 
 .our-goal-para {
@@ -439,12 +472,14 @@ body {
     font-size: 18px;
     font-family: "Instrument sans", sans-serif;
     text-align: left;
-    font-weight: 500;
+    font-weight: 300;
+    overflow-x: visible;
+    overflow: visible;
 }
 
 .our-goal-image {
     width: 50%;
-    height: 400px;
+    height: 45vh;
 }
 
 .download-button {
@@ -457,20 +492,33 @@ body {
     align-items: center;
     flex-direction: column;
     width: 90vw;
-    margin: 100px 5vw;
+    margin: 0px 5vw 100px 5vw;
+    overflow-x: visible;
+    overflow: visible;
+}
+
+.challenges-gradient-back {
+    width: 100vw;
+    height: auto;
+    background: linear-gradient(to bottom right, #ffcc80 -40%, white 15%);
 }
 
 .challenges-heading {
     font-family: "Instrument Serif", serif;
     font-style: italic;
+    letter-spacing: -2.5px;
     font-weight: 200;
     color: #8A6EFF;
-    font-size: 60px;
+    font-size: 70px;
     text-align: center;
+    overflow-x: visible;
+    overflow: visible;
 }
 
 .challenges-heading span {
     color: #ffcc80;
+    overflow-x: visible;
+    overflow: visible;
 }
 
 .challenges-bottom {
@@ -480,6 +528,8 @@ body {
     gap: 5vw; /* Reduced gap between items */
     width: 96%;
     margin-top: 10px; /* Added margin-top for spacing */
+    overflow-x: visible;
+    overflow: visible;
 }
 
 .challenge-container {
@@ -488,12 +538,13 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    overflow-x: visible;
+    overflow: visible;
 }
 
 .challenge-image {
     width: 100%; /* Ensure all images take full width of container */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 350px; /* Set a max height for images */
+    height: 42.5vh; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure images cover the container without distortion */
     margin-bottom: 10px; /* Space between image and text */
 }
@@ -504,11 +555,16 @@ body {
     font-family: "Instrument Sans", sans-serif;
     width: 100%;
     text-align: left;
+    overflow-x: visible;
+    overflow: visible;
+    font-weight: 300;
 }
 
 .challenge-text span {
     font-size: 22px;
     font-weight: 600;
+    overflow-x: visible;
+    overflow: visible;
 }
 
 .testimonials-section {
@@ -518,6 +574,8 @@ body {
     align-items: center;
     flex-direction: column;
     width: 100vw;
+    overflow-x: visible;
+    overflow: visible;
 }
 
 .testimonial-row-1 {
@@ -527,6 +585,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 5vw;
+    overflow-x: visible;
+    overflow: visible;
 }
 
 .testimonial-row-2 {
@@ -534,6 +594,8 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
+    overflow-x: visible;
+    overflow: visible;
 }
 
 .normal-testimonial-1 {
@@ -559,12 +621,17 @@ body {
     font-family: "Instrument serif", sans-serif;
     color: #8A6EFF;
     font-style: italic;
+    letter-spacing: -2.5px;
     font-weight: 500;
+    overflow-x: visible;
+    overflow: visible;
 }
 
 .testimonial-heading {
     position: relative; /* Needed for absolute positioning of pseudo-element */
     display: inline-block; /* Ensures the element wraps the text width */
+    overflow-x: visible;
+    overflow: visible;
 }
 
 .testimonial-heading::after {
@@ -596,6 +663,7 @@ body {
     color: #8A6EFF;
     font-size: 70px;
     font-style: italic;
+    letter-spacing: -2.5px;
 }
 
 .trust-heading span {
@@ -616,6 +684,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50px;
+    overflow-x: visible;
+    overflow-y: visible;
 }
 
 .trust-bottom-box {
@@ -644,7 +714,7 @@ body {
 .trust-card-heading {
     color: #8A6EFF;
     font-size: 20px;
-    font-weight: bolder;
+    font-weight: 500;
     margin: 0 0 8px;
 }
 
@@ -671,6 +741,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow-x: visible;
+    overflow-y: visible;
 }
 
 .contact-us-heading-container {
@@ -685,14 +757,18 @@ body {
 .contact-us-heading {
     font-family: "Instrument Serif", sans-serif;
     font-style: italic;
-    font-size: 60px;
+    letter-spacing: -2.5px;
+    font-size: 70px;
     color: #8A6EFF;
+    overflow-x: visible;
+    overflow-y: visible;
 }
 
 .contact-us-byline {
     color: #403219;
     height: auto;
     font-size: 18px;
+    text-align: center;
 }
 
 .contact-us-form {
@@ -702,6 +778,8 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    overflow-x: visible;
+    overflow-y: visible;
 }
 
 .contact-us-box1 {
@@ -743,6 +821,7 @@ body {
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
 }
 
 .contact-us-box1-heading {
@@ -788,6 +867,9 @@ body {
     width:50%;
     height: 350px;
     margin-left: 10px;
+
+    overflow-x: visible;
+    overflow-y: visible;
 }
 
 .text-input-contact {
@@ -872,7 +954,7 @@ body {
 }
 
 .sidebar {
-    height: 100%;
+    height: 100vh;
     width: 0;
     position: fixed;
     top: 0;
@@ -880,12 +962,13 @@ body {
     background-color: #111;
     overflow-x: hidden;
     transition: width 1s ease;
-    z-index: 10001;
-    padding-top: 0px;
+    z-index: 10000000000001;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 100px 0;
+    overflow-y: hidden;
 }
 
 .sidebar a {
@@ -906,12 +989,14 @@ body {
 
 .sidebar.active {
     width: 90%;
+    z-index: 10000000000000;
 }
 
 .bottom-content {
     position: absolute;
-    bottom: 20px;
+    bottom: 100px;
     text-align: center;
+    overflow-y: hidden;
 }
 
 .bottom-content img {
@@ -940,11 +1025,13 @@ body {
     }
 
     body {
-        background: linear-gradient(to bottom, #ffcc80 0%, 90% white);
+        background: linear-gradient(to bottom, #ffcc80 0%, white 18%);
+        z-index: 100000000000;
     }
 
     .carousel-container {
         height: 60%;
+        margin-top: 100px;
     }
     
     .hero {
@@ -1022,7 +1109,7 @@ body {
     }
 
     .inquire-button {
-        margin-bottom: 20px; /* Reduce gap below button */
+        margin-bottom: 200px; /* Reduce gap below button */
     }
     .row-of-circles {
         gap: 20px;
@@ -1056,6 +1143,14 @@ body {
 }
 
 @media (max-width: 800px) {
+    .challenges-heading {
+        font-size: 55px;
+    }
+
+    .trust-heading {
+        font-size: 55px;
+    }
+
     .contact-us-section {
         height: auto;
     }
@@ -1070,9 +1165,36 @@ body {
         height: auto;
         width: 100%;
     }
+
+    .contact-header-mail {
+        font-size: 10px;
+    }
+
+    .contact-us-right {
+        display: none;
+    }
+
+    .challenges-bottom {
+        flex-direction: column;
+    }
+
+    .testimonials-section {
+        display: none;
+    }
+
+    .our-goal-section {
+        margin: 0 0 100px 0;
+    }
 }
 
 @media (max-width: 480px) {
+    .challenge-image {
+        height: 39vh;
+    }
+
+    .contact-us-byline {
+        width: 90vw;
+    }
 
     .trust-bottom, .trust-div-1, .trust-div-2 {
         gap: 60px
@@ -1131,4 +1253,7 @@ body {
 
 @media (max-width: 400px) {
 
+    .carousel-container {
+        margin-top: 50px;
+    }
 }
