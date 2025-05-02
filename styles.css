@@ -29,7 +29,7 @@ body {
 
 .navbar-div {
     width: 90vw;
-    height: auto;
+    height: auto;   
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -545,8 +545,8 @@ body {
 .challenge-image {
     width: 100%; /* Ensure all images take full width of container */
     height: 42.5vh; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure images cover the container without distortion */
     margin-bottom: 10px; /* Space between image and text */
+    overflow: visible;
 }
 
 .challenge-text {
@@ -1187,10 +1187,13 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 400px) {
     .challenge-image {
-        height: 39vh;
+        height: 100vh;
     }
+}
+
+@media (max-width: 480px) {
 
     .contact-us-byline {
         width: 90vw;
@@ -1251,7 +1254,24 @@ body {
     }
 }
 
+@media (max-width: 440px) {
+    .challenge-image {
+        height: 37.5vh;
+    }
+}
+
+@media (max-width: 420px) {
+    .challenge-image {
+        height: 36.75vh;
+    }
+}
+
 @media (max-width: 400px) {
+
+    .challenge-image {
+        height: 40vh;
+        overflow: visible;
+    }
 
     .carousel-container {
         margin-top: 50px;

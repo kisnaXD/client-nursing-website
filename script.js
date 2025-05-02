@@ -33,6 +33,9 @@ link.addEventListener('click', function(e) {
     if(this.innerText === "Home") {
         window.location.href = "index.html"
     }
+    if(this.innerText === "About Us") {
+        window.location.href = "about-us.html"
+    }
     requestAnimationFrame(() => {
         updateUnderline();
     });

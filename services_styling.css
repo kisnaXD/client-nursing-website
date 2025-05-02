@@ -208,7 +208,7 @@ body {
 }
 
 .hero-section {
-    margin-top: 40px;   
+    margin-top: 0px;   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -503,6 +503,19 @@ body {
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
+    transition: all 0.5s ease;
+}
+
+.grid-item:hover {
+    background-color: #8A6EFF;
+    box-shadow: 
+        5.5px 5.5px 0 12px #403219, /* Outer border */
+        0px 0px 0 -8px #8A6EFF, /* Right and bottom border */
+        0px 0px 0 0px #8A6EFF inset; /* Inner border to cover gaps */
+}
+
+.grid-item:hover .grid-item-heading, .grid-item:hover .grid-item-paragraph {
+    color: white;
 }
 
 .profile-circle {
@@ -517,6 +530,7 @@ body {
     color: #8A6EFF;
     font-family: "Instrument Sans", sans-serif;
     font-weight: 450;
+    transition: all 0.5s ease;
 }
 
 .grid-item-paragraph {
@@ -525,6 +539,7 @@ body {
     font-family: "Instrument Sans", sans-serif;
     font-weight: normal;
     width: 100%;
+    transition: all 0.5s ease;
 }
 
 @media screen and (min-width: 300px) and (max-width: 600px) {
@@ -566,7 +581,7 @@ body {
 
 @media screen and (min-width: 599px) {
     .hero-left-headings {
-        font-size: 2.4em;
+        font-size: 2.1em;
     }
 }
 
@@ -581,7 +596,7 @@ body {
         font-size: 3.2em;
     }
 }
-@media screen and (min-width: 1201px){
+@media screen and (min-width: 1220px){
     .hero-left-headings {
         font-size: 4em;
     }

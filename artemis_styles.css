@@ -213,7 +213,6 @@ body {
     flex-direction: column;
     background: linear-gradient(to bottom, #ffcc80 0%, white 35%);
     z-index: 100;
-    margin-bottom: -400px;
 }
 
 .gradient-filler {
@@ -222,9 +221,23 @@ body {
     background: linear-gradient(to top right, #ffcc80 -50%, white 10%);
 }
 
-.artemis-image {
+.artemis-image-wrapper {
     height: 70vh;
     width: 80vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+.artemis-image {
+    height: 100%;
+    width: 100%;
+    min-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
 }
 
 .hero-paragraph {
@@ -234,6 +247,7 @@ body {
     flex-direction: column;
     width: 80vw;
     height: auto;
+    margin-top: 20px;
 }
 
 .hero-heading-1 {
@@ -243,6 +257,8 @@ body {
     font-size: 54px;
     color: #403219;
     letter-spacing: -2.5px;
+    text-align: center;
+    width: 100%;
 }
 
 .hero-heading-2 {
@@ -251,6 +267,7 @@ body {
     font-size: 46px;
     color: #403219;
     letter-spacing: -2.5px;
+    text-align: center;
 }
 
 .hero-para-small {
@@ -261,67 +278,60 @@ body {
     width: 70%;
 }
 
-.excellence-section-wrapper {
+.about-artemis-hospitals-section {
+    margin-top: 50px;
     width: 100vw;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
-    background: linear-gradient(to right, #ffcc80 -40%, white 15%);
+    padding: 100px 10vw;
+    gap: 5%;
+    background: white;
 }
 
-.excellence-section {
-    width: 87.5vw;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 100px;
-}
-
-.excellence-left {
+.about-artemis-left {
     width: 45%;
     height: auto;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
+    gap: 4vh;
 }
 
-.excellence-right {
-    width: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.excellence-right-image {
-    width: 100%;
-    height: 45vh;
-}
-
-.excellence-left-heading {
-    font-style: italic;
-    font-family: "Instrument Serif", sans-serif;
-    letter-spacing: -1.5px;
-    font-size: 40px;
-    color: #403219;
-}
-
-.excellence-left-para {
+.about-artemis-left-heading {
+    font-size: 30px;
     font-family: "Instrument Sans", sans-serif;
-    font-size: 18px;
-    margin-top: 20px;
     color: #403219;
+    text-decoration: underline;
+    width: 100%;
+    font-weight: 600;
+    text-align: left;
+}
+
+.about-artemis-left-para {
+    font-size: 20px;
+    font-family: "Instrument Sans", sans-serif;
+    color: #403219;
+    font-weight: 350;
+}
+
+.about-artemis-image {
+    height: 40vh;
+    width: 50%;
 }
 
 .stands-out-section-wrapper {
     width: 100vw;
-    height: auto;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(to bottom right, #ffcc80 -40%, white 13%, white 85%, #ffcc80 120%);
+    overflow-y: visible;
+    overflow-x: visible;
+    z-index: 1000000;
 }
 
 .stands-out-section {
@@ -332,6 +342,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow-y: visible;
+    overflow-x: visible;
 }
 
 .stands-out-bottom {
@@ -342,6 +354,9 @@ body {
     height: auto;
     gap: 5vw;
     text-align: center;
+    overflow-y: visible;
+    overflow-x: visible;
+    margin-bottom: 40px;
 }
 
 .stands-out-heading {
@@ -351,6 +366,7 @@ body {
     font-size: 54px;
     color: #8A6EFF;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .stands-out-heading span {
@@ -359,7 +375,7 @@ body {
 
 .stands-out-container-1, .stands-out-container-2, .stands-out-container-3 {
     height: auto;
-    max-height: 60vh;
+    max-height: 50vh;
     width: 27vw;
 }
 
@@ -388,6 +404,8 @@ body {
     width: 100%;
     font-weight: 300;
     height: auto;
+    overflow-y: visible;
+    overflow-x: visible;
 }
 
 .placement-section-wrapper {
@@ -397,10 +415,11 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(to left, #ffcc80 -50%, white 40%);
+    z-index: 100000;
 }
 
 .placement-section {
-    margin-top: 100px;
+    margin-top: 150px;
     margin-bottom: 100px;
     width: 87.5vw;
     height: 100%;
@@ -408,6 +427,14 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.placement-div-1, .placement-div-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5vw;
+    width: 50%;
 }
 
 .placement-heading {
@@ -427,14 +454,19 @@ body {
     align-items: center;
     width: 87.5vw;
     height: auto;
-    gap: 4vw;
+    gap: 2.5vw;
     margin-top: 20px;
+    overflow-y: visible;
+    overflow-x: visible;
+    margin-bottom: 100px;
 }
 
 .placement-container-1, .placement-container-2, .placement-container-3, .placement-container-4 {
     height: auto;
-    max-height: 60vh;
+    max-height: 50vh;
     width: 22vw;
+    overflow-y: visible;
+    overflow-x: visible;
 }
 
 .placement-image {
@@ -448,6 +480,7 @@ body {
     color: #403219;
     font-family: "Instrument Sans", sans-serif;
     font-size: 19px;
+    font-weight: 600;
 }
 
 .placement-container-paragraph {
@@ -482,6 +515,7 @@ body {
     font-family: "Instrument Serif", sans-serif;
     font-style: italic;
     color: #8A6EFF;
+    text-align: center;
 }
 
 .set-apart-heading span {
@@ -495,42 +529,59 @@ body {
     height: auto;
     width: 87.5vw;
     margin-top: 20px;
-    gap: 5vw;
+    flex-direction: column;
 }
 
-.set-apart-container-1, .set-apart-container-2, .set-apart-container-3 {
-    width: 27vw;
+.set-apart-row-1, .set-apart-row-2 {
+    width: 80vw;
     height: auto;
-    max-height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8vw;
+}
+
+.set-apart-container-1, .set-apart-container-2, .set-apart-container-3, .set-apart-container-4 {
+    width: 45%;
+    height: auto;
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1vh;
 }
 
 .set-apart-item-heading-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    width: 70%;
+    gap: 5%;
+}
+
+.set-apart-item-paragraph {
+    font-size: 17px;
+    color: #403219;
+    font-family: "Instrument Sans", sans-serif; 
     width: 100%;
-    margin-bottom: 15px;
 }
 
 .set-apart-item-heading-text {
     font-size: 24px;
+    font-weight: 600;
     color: #403219;
-    font-family: "Instrument Sans", sans-serif;
-    font-weight: 400;
-    width: 80%;
-    margin-left: 20px;
 }
 
 .set-apart-icon {
-    height: 8vh;
-    width: 15%;
+    width: 20%;
+    height: 10vh;
+    min-width: 100px;
+    max-height: 120px;
 }
 
-.set-apart-item-paragraph {
-    font-size: 16px;
-    color: #403219;
-    font-family: "Instrument Sans", sans-serif;
-    font-weight: 600;
+#icon4 {
+    width: 20%;
 }
 
 .artemis-leadership {
@@ -548,6 +599,7 @@ body {
     font-family: "Instrument Serif", sans-serif;
     font-style: italic;
     color: #8A6EFF;
+    text-align: center;
 }
 
 .artemis-leadership-heading span {
@@ -667,10 +719,11 @@ body {
     width: 40px;
     cursor: pointer;
     height: 40px;
+    align-self: flex-start;
 }
 /* Mobile: 1 column, 6 rows */
 @media screen and (max-width: 599px) {
-
+    
     .courses-bottom {
         flex-direction: column;
         gap: 40px;
@@ -686,6 +739,97 @@ body {
 
     .separation-paragraph {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .about-artemis-hospitals-section {
+        flex-direction: column;
+        height: auto;
+        width: 90vw;
+        gap: 5vh;
+        padding: 20px 5vw;
+    }
+
+    .about-artemis-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-artemis-left-heading {
+        text-align: center;
+        width: 90vw;
+    }
+
+    .about-artemis-image {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .hero-paragraph {
+        width: 90vw;
+        text-align: center;
+    }
+
+    .hero-heading-1, .hero-heading-2, .hero-para-small {
+        width: 90vw;
+    }
+
+    .set-apart-bottom {
+        gap: 0;
+    }
+
+    .set-apart-row-1, .set-apart-row-2 {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .set-apart-container-1, .set-apart-container-2, .set-apart-container-3, .set-apart-container-4 {
+        width: 90vw;
+        height: auto;
+        align-items: center;    
+    }
+
+    .set-apart-item-heading-text, .set-apart-item-paragraph {
+        text-align: center;
+    }
+
+    .set-apart-icon {
+        min-width: 75px;
+    }
+
+    .artemis-leadership-heading, .set-apart-heading {
+        font-size: 44px;    
+    }
+
+    .artemis-leadership-bottom {
+        gap: 15vh;
+    }
+
+    .main-leader {
+        flex-direction: column;
+        gap: 2vh;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .main-image {
+        width: 80vw;
+    }
+
+    .main-leader-text {
+        width: 78vw;
+    }
+
+    .side-leaders {
+        flex-direction: column;
+        height: auto;
+        gap: 9vh;
+    }
+
+    .side-leaders-container-1, .side-leaders-container-2, .side-leaders-container-3 {
+        width: 80vw;
+        height: auto;
     }
 }
 
@@ -713,5 +857,24 @@ body {
 
     .hamburger-menu {
         display: flex; /* Show hamburger menu */
+    }
+
+    .placement-bottom {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 87.5vw;
+        height: 100vh;
+        gap: 0;
+    }
+
+    .placement-div-1, .placement-div-2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .placement-container-1, .placement-container-2, .placement-container-3, .placement-container-4 {
+        height: 20vh;
+        width: 50%;
     }
 }
