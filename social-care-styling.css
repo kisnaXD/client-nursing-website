@@ -301,6 +301,10 @@ body {
     margin-top: 40px;
 }
 
+.candidate-journey-bottom-container {
+    display: none;
+}
+
 .training-include-section {
     width: 80vw;
     height: auto;
@@ -728,6 +732,7 @@ body {
     color: #8a6eff;
     background: #ffeac8;
 }
+
 @media screen and (max-width: 800px) {
     .hero-paragraph {
         width: 90vw;
@@ -738,6 +743,166 @@ body {
         width: 90vw;
     }
 
+    .candidate-journey-bottom {
+        display: none;
+    }
+
+    .candidate-journey-heading {
+        font-size: 54px;
+        text-align: center;
+        align-self: center;
+    }
+
+    .candidate-journey-byline {
+        width: 100%;
+        text-align: center;
+        align-self: center;
+    }
+
+    .candidate-journey-bottom-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        width: 80vw;
+        gap: 5vh;
+        margin-top: 5vh;
+    }
+
+    .candidate-journey-container {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .candidate-journey-img {
+        height: 40vh;
+        width: 100%;
+    }
+
+    .candidate-journey-item-text {
+        font-size: 30px;
+        font-family: "Instrument Serif", sans-serif;
+        font-style: italic;
+        font-weight: 300;
+        margin-top: 2.5vh;
+        width: 100%;
+    }
+
+    .right {
+        text-align: right;
+    }
+
+    .training-include-heading {
+        text-align: center;
+        width: 100vw;
+        font-size: 54px;
+    }
+
+    .training-include-row-1, .training-include-row-2 {
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .training-methodology-section {
+        flex-direction: column;
+        gap: 2.5vh;
+    }
+
+    .training-methodology-left-text, .training-methodology-right-image {
+        width: 100%;
+    }
+
+    .training-include-container-1, .training-include-container-2, .training-include-container-3, .training-include-container-4 {
+        width: 100%;
+    }
+
+    .our-advantage-heading {
+        width: 100vw;
+        text-align: center;
+        font-size: 54px;
+    }
+
+    .who-can-apply-heading {
+        font-size: 54px;
+        text-align: center;
+        width: 100vw;
+    }
+
+    .who-can-apply-para {
+        text-align: center;
+        width: 100vw;
+    }
+
+    .who-can-apply-bottom {
+        flex-direction: column;
+        gap: 3vh;
+    }
+
+    .who-can-apply-container-1, .who-can-apply-container-2, .who-can-apply-container-3 {
+        width: 100%;
+    }
+
+    .meet-our-candidates-heading {
+        width: 90vw;
+        font-size: 54px;
+        text-align: center;
+    }
+
+    .meet-our-candidates-para {
+        width: 90vw;
+        text-align: center;
+    }
+
+    .meet-our-candidates-bottom {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .meet-our-candidates-left-text, .meet-our-candidates-right-image {
+        width: 100%;
+    }
+
+    .your-workforce-heading {
+        width: 90vw;
+        text-align: center;
+        font-size: 54px;
+    }
+
+    .your-workforce-bottom {
+        flex-direction: column;
+        gap: 2.5vh;
+    }
+
+    .your-workforce-left-image, .your-workforce-right {
+        width: 100%;
+    }
+
+    .your-workforce-right {
+        gap: 2.5vh;
+    }
+
+    .selection-heading {
+        width: 100%;
+        text-align: center; 
+    }
+
+    .selection-bottom-row-1, .selection-bottom-row-2 {
+        flex-direction: column;
+        gap: 2.5vh;
+    }
+
+    .selection-bottom-item-para {
+        width: 100%;
+        text-align: center;
+    }
+
+    .selection-bottom-container-1, .selection-bottom-container-2, .selection-bottom-container-3, .selection-bottom-container-4, .selection-bottom-container-5, .selection-bottom-container-6, .selection-bottom-container-7, .selection-bottom-container-8 {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 1024px) {
