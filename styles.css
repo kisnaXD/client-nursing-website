@@ -628,8 +628,8 @@ body {
 }
 
 .testimonial-heading {
-    position: relative; /* Needed for absolute positioning of pseudo-element */
-    display: inline-block; /* Ensures the element wraps the text width */
+    position: relative; 
+    display: inline-block; 
     overflow-x: visible;
     overflow: visible;
 }
@@ -637,11 +637,101 @@ body {
 .testimonial-heading::after {
     content: '';
     position: absolute;
-    bottom: -2px; /* Distance below the text */
-    right: 0; /* Start from the right */
-    width: 60%; /* Underline covers 60% of text width */
-    height: 10px; /* Thickness of the underline */
-    background-color: #ffb335; /* Corrected hex color */
+    bottom: -2px; 
+    right: 0; 
+    width: 60%; 
+    height: 10px;
+    background-color: #ffb335; 
+}
+
+.testimonials-section-phone {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Instrument Serif', sans-serif;
+    background: linear-gradient(to top left, #ffcc80 -40%, white 40%);
+    display: none;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 100px;
+    margin-top: -50px;
+}
+  
+.testimonials-heading-phone {
+    font-style: italic;
+    font-size: 54px;
+    color: #8A6EFF;
+    margin-bottom: 20px;
+}
+  
+.carousel-testimonials {
+    width: 75vw;
+    height: 55vh;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    position: relative;
+}
+  
+.carousel-container-testimonials {
+    display: flex;
+    width: calc(75vw * 4);
+    animation: slide 30s infinite;
+}
+  
+.carousel-item-testimonials {
+    width: 75vw;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    font-size: 1.5rem;
+    border-right: 1px solid #ddd;
+}
+
+.testimonial-carousel-dp {
+    width: 80%;
+    height: 60%;
+}
+
+.testimonial-carousel-post {
+    color: #403219;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 550;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.testimonial-carousel-para {
+    color: #403219;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    width: 80%;
+    background: #8A6EFF;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+}
+  
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-75vw);
+    }
+    50% {
+        transform: translateX(-150vw);
+    }
+    75% {
+        transform: translateX(-225vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .trust-section {
@@ -1184,6 +1274,10 @@ body {
 
     .our-goal-section {
         margin: 0 0 100px 0;
+    }
+
+    .testimonials-section-phone {
+        display: block;
     }
 }
 

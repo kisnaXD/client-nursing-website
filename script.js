@@ -202,3 +202,17 @@ window.addEventListener('scroll', () => {
     }
 });
 });
+
+const carouselT = document.querySelector('.carousel-container-testimonials');
+const itemsT = document.querySelectorAll('.carousel-item-testimonials');
+let currentIndexTestimonials = 0;
+
+function startCarousel() {
+    setInterval(() => {
+        currentIndexTestimonials = (currentIndexTestimonials + 1) % itemsT.length;
+        carouselT.style.transition = 'transform 1s ease';
+        carouselT.style.transform = `translateX(-${currentIndexTestimonials * 60}vw)`;
+    }, 20000);
+}
+
+startCarousel();
