@@ -215,12 +215,6 @@ body {
     z-index: 100;
 }
 
-.gradient-filler {
-    width: 100vw;
-    height: 500px;
-    background: linear-gradient(to top right, #ffcc80 -50%, white 10%);
-}
-
 .artemis-image-wrapper {
     height: 70vh;
     width: 80vw;
@@ -484,7 +478,7 @@ body {
 }
 
 .ahrpa-highlights-container-img {
-    width: 20vw;
+    width: 100%;
     height: 35vh;
 }
 
@@ -1024,6 +1018,159 @@ body {
 
     .hero-heading-1, .hero-heading-2, .hero-para-small {
         width: 90vw;
+    }
+
+    .about-artemis-left-button {
+        align-self: center;
+    }
+
+    .ahrpa-heading {
+        text-align: center;
+    }
+
+    .ahrpa-byline-heading {
+        width: 85vw;
+        font-size: 20px;
+    }
+
+    .ahrpa-byline-small {
+        font-size: 18px;
+    }
+
+    .ahrpa-byline-para {
+        width: 85vw;
+    }
+
+    .ahrpa-highlights-heading {
+        width: 42vw;
+        font-size: 20px;
+    }
+
+    .ahrpa-highlights-bigrow {
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .ahrpa-highlights-row-1, .ahrpa-highlights-row-2 {
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .ahrpa-highlights-container {
+        width: 70vw;
+    }
+
+    .ahrpa-who-can-apply-heading {
+        width: 34vw;
+        font-size: 20px;
+    }
+
+    .ahrpa-who-can-apply-bottom {
+        flex-direction: column;
+    }
+
+    .ahrpa-who-can-apply-container {
+        width: 70vw;
+        flex-direction: column;
+    }
+
+    .ahrpa-who-can-apply-img {
+        width: 60%;
+    }
+
+    .ahrpa-who-can-apply-para {
+        text-align: center;
+    }
+
+    .ahrpa-heading {
+        font-size: 44px;
+        text-align: center;
+    }
+
+    .not-ahrpa-heading {
+        width: 90vw;
+        font-size: 20px;
+    }
+
+    .not-ahrpa-byline-heading, .not-ahrpa-byline-para {
+        width: 85vw;
+    }
+
+    .what-is-nclex-heading {
+        font-size: 44px;
+        text-align: center;
+    }
+
+    .what-is-nclex-byline {
+        width: 85vw;
+    }
+
+    .nclex-includes {
+        width: 53vw;
+        font-size: 20px;
+    }
+
+    .nclex-includes-bottom {
+        flex-direction: column;
+        gap: 7vh;
+    }
+
+    .ahrpa-highlights-row-1, .ahrpa-highlights-row-2 {
+        flex-direction: column;
+    }
+
+    .what-is-osce-heading {
+        text-align: center;
+        font-size: 44px;
+    }
+
+    .what-is-osce-para {
+        width: 85vw;
+    }
+
+    .osce-covers-heading {
+        width: 56vw;
+    }
+
+    .osce-covers-bottom {
+        flex-direction: column;
+        gap: 7vh;
+    }
+
+    .osce-covers-bottom-row-1, .osce-covers-bottom-row-2 {
+        flex-direction: column;
+        gap: 7vh;
+    }
+
+    .osce-covers-bottom-container {
+        width: 60vw;
+    }
+
+    .sub-heading {
+        width: 35vw;
+        font-size: 20px;
+    }
+
+    .who-can-apply-osce-bottom {
+        flex-direction: column;
+    }
+
+    .who-can-apply-osce-left-container, .who-can-apply-osce-right-container {
+        width: 90vw;
+    }
+
+    .why-ed2careers-section-heading {
+        font-size: 44px;
+        text-align: center;
+    }
+
+    .why-ed2careers-bottom-row {
+        flex-direction: column;
+        gap: 8vh;
+    }
+    
+    .why-ed2careers-row-container {
+        width: 85vw;
     }
 }
 
