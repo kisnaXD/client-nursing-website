@@ -213,10 +213,8 @@ body {
 
 .hero-left-image {
     width: 71.25%;
-    height: 61.5vh;
-    background: #d9d9d9;
-    box-shadow: 0 0 6px rgba(0,0,0,0.5);
-    border-radius: 10px;
+    height: 66.5vh;
+    border-radius: 30px;
     border: none;
 }
 
@@ -251,7 +249,7 @@ body {
 
 .hero-text-heading {
     font-size: 64px;
-    font-family: "Instrument Serif", sans-serif;
+    font-family: "Instrument Serif", serif;
     color: #403219;
     font-weight: 400;
     font-style: italic;
@@ -287,7 +285,7 @@ body {
 .our-story-heading {
     font-size: 64px;
     color: #8A6EFF;
-    font-family: "Instrument Serif", sans-serif;
+    font-family: "Instrument Serif", serif;
     font-style: italic;
     text-align: center;
 }
@@ -384,7 +382,7 @@ body {
 .life-at-ed2-heading {
     font-size: 64px;
     color: #8A6EFF;
-    font-family: "Instrument Serif", sans-serif;
+    font-family: "Instrument Serif", serif;
     font-style: italic;
     font-weight: 350;
     text-align: center;
@@ -423,6 +421,7 @@ body {
     flex-direction: column;
     height: 60vh;
     width: 80vw;
+    margin-top: 50px;
 }
 
 .lets-connect-button {
@@ -510,7 +509,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-family: "Instrument Serif", sans-serif;
+    font-family: "Instrument Serif", serif;
     font-style: italic;
     font-size: 38px;
     color: #403219;
@@ -524,6 +523,77 @@ body {
 
 .lets-connect-section-mobile {
     display: none;
+}
+
+.meet-the-team-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+}
+
+.meet-the-team-section-heading {
+    font-size: 64px;
+    color: #8a6eff;
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-weight: lighter;
+    letter-spacing: -2.5px;
+}
+
+.meet-the-team-section-heading span {
+    color: #ffcc80;
+}
+
+.meet-the-team-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 87.5vw;
+    gap: 5vw;
+    height: auto;
+    margin-top: 50px;
+}
+
+.side-leaders-container-1, .side-leaders-container-2, .side-leaders-container-3 {
+    width: 27vw;
+    height: auto;
+    max-height: 55vh;
+}
+
+.side-image {
+    width: 100%;    
+    height: 50vh;
+}
+
+.side-leader-info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.name-and-role {
+    font-size: 1.1em;
+    color: #403219;
+    font-weight: lighter;
+    font-family: "Instrument Sans", sans-serif;
+}
+
+.name-and-role span {
+    font-size: 1.4em;
+    font-weight: 600;
+    font-family: "Instrument Sans", sans-serif;
+}
+
+.linked-in-icon {
+    width: 40px;
+    cursor: pointer;
+    height: 40px;
+    align-self: flex-start;
 }
 @media screen and (max-width: 1024px) {
     .hamburger-menu {

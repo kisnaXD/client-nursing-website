@@ -211,7 +211,6 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
 }
 
 .artemis-image {
@@ -219,7 +218,6 @@ body {
     width: 100%;
     min-width: 900px;
     border-radius: 10px;
-    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
 }
 
 .hero-section {
@@ -384,11 +382,8 @@ body {
 }
 
 .training-methodology-right-image {
-    height: 35vh;
+    height: 40vh;
     width: 47.5%;
-    background: #d9d9d9;
-    border-radius: 5px;
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.5);
 }
 
 .training-methodology-left-text {

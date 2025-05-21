@@ -279,13 +279,12 @@ body {
 }
 
 .about-artemis-hospitals-section {
-    margin-top: 50px;
     width: 100vw;
     height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 10vw;
+    padding: 150px 10vw 100px 10vw;
     gap: 5%;
     background: white;
 }
