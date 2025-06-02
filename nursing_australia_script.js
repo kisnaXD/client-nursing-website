@@ -36,8 +36,14 @@ link.addEventListener('click', function(e) {
     if(this.innerText === "About Us") {
         window.location.href = "about-us.html"
     }
-    if(this.innerText === "Social care") {
+    if(this.innerText === "Social Care") {
         window.location.href = "social-care.html"
+    }
+    if(this.innerText === "Nursing UK") {
+        window.location.href = "nursing_uk.html"
+    }
+    if(this.innerText === "Nursing Australia") {
+        window.location.href = "nursing_australia.html"
     }
     requestAnimationFrame(() => {
         updateUnderline();

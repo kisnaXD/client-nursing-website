@@ -19,6 +19,13 @@
             <a href="#">Services</a>
             <a href="#" class="active">About Us</a>
             <a href="#">Social Care</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Nursing <span class="dropdown-arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="nursing-uk.html">Nursing UK</a>
+                    <a href="nursing-australia.html">Nursing Australia</a>
+                </div>
+            </div>
             <a id="artemisID" href="#"><div class="artemis">Artemis Partnership</div></a>
             <span class="underline"></span>
         </nav>
@@ -32,6 +39,8 @@
         <a href="#">Services</a>
         <a href="#">About Us</a>
         <a href="#">Social Care</a>
+        <a href="#">Nursing UK</a>
+        <a href="#">Nursing Australia</a>
         <a href="#">Artemis Partnership</a>
         <div class="bottom-content">
             <img src="./assets/bg_logo.png" alt="Logo">
@@ -40,13 +49,25 @@
     </div>
     <section class="hero-section">
         <div class="hero-images">
-            <img src="./assets/about_us_hero.png" alt="" class="hero-left-image">
+            <div class="hero-left-image">
+                <img src="./assets/about_us_hero.png" alt="" class="hero-left-image-file" id="heroMainImage">
+            </div>
             <div class="hero-right-images">
-                <div class="hero-right-small"></div>
-                <div class="hero-right-small"></div>
-                <div class="hero-right-small"></div>
-                <div class="hero-right-small"></div>
-                <div class="hero-right-small"></div>
+                <div class="video-thumb hero-right-small" data-video="assets/video1.mp4" style="background-image: url('assets/about_us_hero.png')">
+                    <span>Video 1</span>
+                </div>
+                <div class="video-thumb hero-right-small" data-video="assets/video2.mp4" style="background-image: url('assets/about_us_hero.png')">
+                    <span>Video 2</span>
+                </div>
+                <div class="video-thumb hero-right-small" data-video="assets/video3.mp4" style="background-image: url('assets/about_us_hero.png')">
+                    <span>Video 3</span>
+                </div>
+                <div class="video-thumb hero-right-small" data-video="assets/video4.mp4" style="background-image: url('assets/about_us_hero.png')">
+                    <span>Video 4</span>
+                </div>
+                <div class="video-thumb hero-right-small" data-video="assets/video5.mp4" style="background-image: url('assets/about_us_hero.png')">
+                    <span>Video 5</span>
+                </div>
             </div>
         </div>
         <div class="hero-text">
@@ -192,19 +213,19 @@
             <p class="footer-heading">Index</p>
             <div class="ed2-index-bottom">
                 <div class="ed2-index-bottom-row">
-                    <a href="" class="ed2-index-bottom-row-item">Home</a>
-                    <a href="" class="ed2-index-bottom-row-item">About Us</a>
+                    <a href="index.html" class="ed2-index-bottom-row-item">Home</a>
+                    <a href="about-us.html" class="ed2-index-bottom-row-item">About Us</a>
                 </div>
                 <div class="ed2-index-bottom-row">
-                    <a href="" class="ed2-index-bottom-row-item">Services</a>
-                    <a href="" class="ed2-index-bottom-row-item">Nursing United Kingdom</a>
+                    <a href="services.html" class="ed2-index-bottom-row-item">Services</a>
+                    <a href="nursing_uk.html" class="ed2-index-bottom-row-item">Nursing United Kingdom</a>
                 </div>
                 <div class="ed2-index-bottom-row">
-                    <a href="" class="ed2-index-bottom-row-item">Social Care</a>
-                    <a href="" class="ed2-index-bottom-row-item">Nursing Australia</a>
+                    <a href="social-care.html" class="ed2-index-bottom-row-item">Social Care</a>
+                    <a href="nursing_australia.html" class="ed2-index-bottom-row-item">Nursing Australia</a>
                 </div>
                 <div class="ed2-index-bottom-row">
-                    <a href="" id="artemis-footer" class="ed2-index-bottom-row-item">Artemis Partnership</a>
+                    <a href="artemis.html" id="artemis-footer" class="ed2-index-bottom-row-item">Artemis Partnership</a>
                 </div>
             </div>
         </div>
@@ -215,7 +236,7 @@
             <div class="contact-us-bottom">
                 <div class="contact-us-bottom-container">
                     <p class="contact-us-bottom-container-tl">Write To us</p>
-                    <p class="contact-us-bottom-container-bl">xyz@gmail.com</p>
+                    <p class="contact-us-bottom-container-bl">training@ed2careers.com</p>
                 </div>
                 <div class="contact-us-bottom-container">
                     <p class="contact-us-bottom-container-tl">Call Us</p>
@@ -235,6 +256,6 @@
             </div>
         </div>
     </section>
-    <script src="script.js"></script>
+    <script src="about-us_script.js"></script>
 </body>
 </html>

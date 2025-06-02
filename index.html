@@ -19,7 +19,13 @@
             <a href="services.html">Services</a>
             <a href="services.html">About Us</a>
             <a href="#">Social Care</a>
-            <a href="#">Nursing</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Nursing <span class="dropdown-arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="nursing-uk.html">Nursing UK</a>
+                    <a href="nursing-australia.html">Nursing Australia</a>
+                </div>
+            </div>
             <a id="artemisID" href="#"><div class="artemis">Artemis Partnership</div></a>
             <span class="underline"></span>
         </nav>
@@ -33,6 +39,8 @@
         <a href="#">Services</a>
         <a href="#">About Us</a>
         <a href="#">Social Care</a>
+        <a href="#">Nursing UK</a>
+        <a href="#">Nursing Australia</a>
         <a href="#">Artemis Partnership</a>
         <div class="bottom-content">
             <img src="./assets/bg_logo.png" alt="Logo">
@@ -210,7 +218,7 @@
                             <img src="./assets/icon_5.png" alt="" class="contact-circle">
                             <div class="contact-header">
                                 <p class="contact-header-big">Write to Us</p>
-                                <p class="contact-header-mail">xyz@gmail.com</p>
+                                <p class="contact-header-mail">training@ed2careers.com</p>
                             </div>
                         </div>
                         <div class="single-contact">
@@ -244,10 +252,26 @@
                     <input type="text" class="text-input-contact-row" placeholder="Phone" id="phone"/>
                 </div>
                 <div class="city-and-state">
-                    <div class="city-input"></div>
-                    <div class="state-input"></div>
+                    <select id="city-input" class="text-input-contact-row">
+                        <option value="">City</option>
+                        <option value="">City</option>
+                        <option value="">City</option>
+                        <option value="">City</option>
+                        <option value="">City</option>
+                        <option value="">City</option>
+                        <option value="">City</option>
+                    </select>
+                    <select id="state-input" class="text-input-contact-row">
+                        <option value="">State</option>
+                        <option value="">State</option>
+                        <option value="">State</option>
+                        <option value="">State</option>
+                        <option value="">State</option>
+                        <option value="">State</option>
+                        <option value="">State</option>
+                    </select>
                 </div>
-                <input type="text" class="text-input-contact" placeholder="Select I am a" />
+                <input type="text" class="text-input-contact-2" placeholder="Select I am a" />
                 <div class="submit-button-contact">
                     Submit
                 </div>
@@ -260,19 +284,19 @@
             <p class="footer-heading">Index</p>
             <div class="ed2-index-bottom">
                 <div class="ed2-index-bottom-row">
-                    <a href="" class="ed2-index-bottom-row-item">Home</a>
-                    <a href="" class="ed2-index-bottom-row-item">About Us</a>
+                    <a href="index.html" class="ed2-index-bottom-row-item">Home</a>
+                    <a href="about-us.html" class="ed2-index-bottom-row-item">About Us</a>
                 </div>
                 <div class="ed2-index-bottom-row">
-                    <a href="" class="ed2-index-bottom-row-item">Services</a>
-                    <a href="" class="ed2-index-bottom-row-item">Nursing United Kingdom</a>
+                    <a href="services.html" class="ed2-index-bottom-row-item">Services</a>
+                    <a href="nursing_uk.html" class="ed2-index-bottom-row-item">Nursing United Kingdom</a>
                 </div>
                 <div class="ed2-index-bottom-row">
-                    <a href="" class="ed2-index-bottom-row-item">Social Care</a>
-                    <a href="" class="ed2-index-bottom-row-item">Nursing Australia</a>
+                    <a href="social-care.html" class="ed2-index-bottom-row-item">Social Care</a>
+                    <a href="nursing_australia.html" class="ed2-index-bottom-row-item">Nursing Australia</a>
                 </div>
                 <div class="ed2-index-bottom-row">
-                    <a href="" id="artemis-footer" class="ed2-index-bottom-row-item">Artemis Partnership</a>
+                    <a href="artemis.html" id="artemis-footer" class="ed2-index-bottom-row-item">Artemis Partnership</a>
                 </div>
             </div>
         </div>
@@ -283,7 +307,7 @@
             <div class="contact-us-bottom">
                 <div class="contact-us-bottom-container">
                     <p class="contact-us-bottom-container-tl">Write To us</p>
-                    <p class="contact-us-bottom-container-bl">xyz@gmail.com</p>
+                    <p class="contact-us-bottom-container-bl">training@ed2careers.com</p>
                 </div>
                 <div class="contact-us-bottom-container">
                     <p class="contact-us-bottom-container-tl">Call Us</p>

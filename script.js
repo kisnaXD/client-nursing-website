@@ -36,6 +36,15 @@ link.addEventListener('click', function(e) {
     if(this.innerText === "About Us") {
         window.location.href = "about-us.html"
     }
+    if(this.innerText === "Social Care") {
+        window.location.href = "social-care.html"
+    }
+    if(this.innerText === "Nursing UK") {
+        window.location.href = "nursing_uk.html"
+    }
+    if(this.innerText === "Nursing Australia") {
+        window.location.href = "nursing_australia.html"
+    }
     requestAnimationFrame(() => {
         updateUnderline();
     });
@@ -56,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.addEventListener('click', function(event) {
         var sidebar = document.getElementById('sidebar');
-        var hamburger = document.getElementById('hamburger');
+        var hamburger = document.getElementById('hamburger-menu');
         if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
             sidebar.classList.remove('active');
         }

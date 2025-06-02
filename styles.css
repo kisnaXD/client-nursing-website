@@ -5,6 +5,13 @@
     overflow-x: hidden;
 }
 
+.navbar-div,
+.navbar,
+.navbar .dropdown,
+.navbar .dropdown-content {
+    overflow-x: visible !important;
+}
+
 .trust-div-1, .trust-div-2 {
     display: flex;
     justify-content: center;
@@ -46,6 +53,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-x: visible;
 }
 
 .navbar a {
@@ -523,17 +531,17 @@ body {
 
 .challenges-bottom {
     display: flex;
-    justify-content: space-between; /* Adjusted to space items equally */
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 5vw; /* Reduced gap between items */
+    gap: 5vw; 
     width: 96%;
-    margin-top: 10px; /* Added margin-top for spacing */
+    margin-top: 10px; 
     overflow-x: visible;
     overflow: visible;
 }
 
 .challenge-container {
-    flex: 1; /* Ensure all items take equal space */
+    flex: 1; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -543,9 +551,9 @@ body {
 }
 
 .challenge-image {
-    width: 100%; /* Ensure all images take full width of container */
-    height: 42.5vh; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Space between image and text */
+    width: 100%; 
+    height: 42.5vh; 
+    margin-bottom: 10px; 
     overflow: visible;
 }
 
@@ -957,49 +965,78 @@ body {
     width:50%;
     height: 350px;
     margin-left: 10px;
-
+    
     overflow-x: visible;
     overflow-y: visible;
 }
 
-.text-input-contact {
+.text-input-contact, .text-input-contact-2 {
     width: 100%;
     height: auto;
     padding: 12px;
     border: 1px solid #ffb335;
     background: rgba(255,204,108,0.1);
-    border-radius: 8px;
+    border-radius: 15px;
     font-family: "Instrument Sans", sans-serif;
     font-size: 18px;
     font-family: "Instrument Sans", sans-serif;
+}
+
+.text-input-contact {
+    justify-self: flex-start;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="black" height="18" viewBox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center/18px 18px;
+    padding-right: 36px; /* Make space for the arrow */
+    border: 1px solid #000000;
+    border-radius: 4px;
+    height: 40px; /* Example height */
 }
 
 .email-and-phone-number {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 96%;
     margin: 10px 0;
+    align-self: flex-start;
 }
 
 .text-input-contact-row {
-    width: 50%;
+    width: 49%;
     height: auto;
     padding: 12px;
     border: 1px solid #ffb335;
     background: rgba(255,204,108,0.1);
-    border-radius: 8px;
+    border-radius: 15px;
     font-family: "Instrument Sans", sans-serif;
     font-size: 18px;
     font-family: "Instrument Sans", sans-serif;
+    color: #d9d9d9;
+}
+
+.city-and-state {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    align-self: flex-start;
+    margin: 10px 0;
 }
 
 #email {
     margin-right: 0.5%;
+    width: 69%
 }
 
 #phone {
-    margin-right: 2%;
+    margin-right: 0%;
+    width: 29%;
+    justify-self: flex-end;
 }
 
 .text-input-contact placeholder {
@@ -1015,9 +1052,10 @@ body {
     background-color: #8A6EFF;
     height: auto;
     padding: 15px 0;
-    margin-top: 10px;
+    margin-top: 30px;
     color: #ffeac8;
     border-radius: 25px;
+    justify-self: flex-end;
 }
 
 .footer-section {
@@ -1155,6 +1193,11 @@ body {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
+
+    .roc-circle {
+        width: 100px;
+        height:100px;
+    }
 
     .hero-bg-logo {
         position: absolute;

@@ -33,6 +33,18 @@ link.addEventListener('click', function(e) {
     if(this.innerText === "Home") {
         window.location.href = "index.html"
     }
+    if(this.innerText === "About Us") {
+        window.location.href = "about-us.html"
+    }
+    if(this.innerText === "Social Care") {
+        window.location.href = "social-care.html"
+    }
+    if(this.innerText === "Nursing UK") {
+        window.location.href = "nursing_uk.html"
+    }
+    if(this.innerText === "Nursing Australia") {
+        window.location.href = "nursing_australia.html"
+    }
     requestAnimationFrame(() => {
         updateUnderline();
     });
@@ -57,5 +69,39 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
             sidebar.classList.remove('active');
         }
+    });
+    const mediaContainer = document.querySelector('.hero-left-image');
+    const mainImage = document.getElementById('heroMainImage');
+    const thumbs = document.querySelectorAll('.video-thumb');
+    let playingVideo = null;
+    
+    thumbs.forEach(thumb => {
+        thumb.addEventListener('click', function() {
+        thumbs.forEach(t => t.classList.remove('selected'));
+        this.classList.add('selected');
+        if (playingVideo) {
+            playingVideo.pause();
+            playingVideo.remove();
+            playingVideo = null;
+        }
+        mainImage.style.display = 'none';
+        const videoSrc = this.getAttribute('data-video');
+        const video = document.createElement('video');
+        video.src = videoSrc;
+        video.controls = true;
+        video.autoplay = true;
+        video.style.width = "100%";
+        video.style.height = "100%";
+        video.style.objectFit = "cover";
+        video.style.borderRadius = "18px";
+        mediaContainer.appendChild(video);
+        playingVideo = video;
+        video.addEventListener('ended', function() {
+            video.remove();
+            mainImage.style.display = '';
+            thumbs.forEach(t => t.classList.remove('selected'));
+            playingVideo = null;
+        });
+        });
     });
 });

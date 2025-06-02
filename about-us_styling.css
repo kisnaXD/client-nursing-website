@@ -218,6 +218,11 @@ body {
     border: none;
 }
 
+.hero-left-image-file {
+    width: 100%;
+    height: 100%;
+}
+
 .hero-right-images {
     display: flex;
     justify-content: center;
@@ -261,6 +266,77 @@ body {
     font-weight: 600;
     font-style: normal;
     letter-spacing: -2.5px;
+}
+
+.about-hero {
+    display: flex;
+    align-items: stretch;
+    gap: 40px;
+    width: 100%;
+    margin: 50px 0;
+}
+  
+.about-hero-media {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+    background: #f6f6fa;
+    border-radius: 18px;
+    box-shadow: 0 3px 16px rgba(0,0,0,0.08);
+    overflow: hidden;
+    position: relative;
+}
+
+.about-hero-media img,
+.about-hero-media video {
+    width: 100%;
+    max-height: 430px;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+    background: #ddd;
+}
+
+.about-hero-media video {
+    background: #000;
+}
+
+.about-hero-videos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: center;
+}
+
+.video-thumb {
+    position: relative;
+    background: transparent center center/cover no-repeat;
+    box-shadow: 0 2px 10px rgba(138,110,255,0.12);
+    cursor: pointer;
+    transition: transform 0.19s, box-shadow 0.19s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.video-thumb:active, .video-thumb.selected {
+    transform: scale(1.04);
+    box-shadow: 0 4px 20px rgba(138,110,255,0.18);
+    outline: 2px solid #8A6EFF;
+}
+
+.video-thumb span {
+    background: rgba(255,255,255,.85);
+    padding: 4px 16px;
+    border-radius: 18px;
+    font-weight: 500;
+    color: #8A6EFF;
+    font-size: 1.08rem;
+    z-index: 1;
 }
 
 .hero-text-para {
