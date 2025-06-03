@@ -198,7 +198,7 @@ body {
     color: #FFEAC8;
     border: none;
     border-radius: 50px;
-    padding: 10px 30px;
+    padding: 0.8rem 1.5rem;
     cursor: pointer;
     z-index: 1000000;
     display: inline-flex;
@@ -272,9 +272,9 @@ body {
 }
 
 .carousel-container {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: min(45vh, 350px);
     left: 0;
     top: 18%;
     right: 0;
@@ -286,6 +286,7 @@ body {
     align-items: center;
     overflow: hidden;
     z-index: 100;
+    margin-top: 150px;
 }
 
 .carousel {
@@ -302,7 +303,8 @@ body {
 .carousel-item {
     position: absolute;
     width: min(90%, 450px);  /* Reduced width */
-    height: min(45vh, 350px);  /* Increased height */
+    max-width: 450px;
+    height: 100%;  /* Increased height */
     background-color: #fff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     overflow: hidden;
@@ -311,12 +313,14 @@ body {
     backface-visibility: hidden;
     transform-origin: center center;
     cursor: pointer; /* Make items clickable */
+    display: block;
 }
 
 .carousel-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     overflow-x:visible;
 }
 
@@ -452,12 +456,13 @@ body {
 .our-goal-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align to left */
-    justify-content: center;
+    align-items: flex-start; 
+    justify-content: space-between;
     width: 40%;
     margin-top: 5px;
     overflow-x: visible;
     overflow: visible;
+    height: 52vh;
 }
 
 .our-goal-heading {
@@ -487,7 +492,7 @@ body {
 
 .our-goal-image {
     width: 50%;
-    height: 45vh;
+    height: 52vh;
 }
 
 .download-button {
@@ -584,10 +589,11 @@ body {
     width: 100vw;
     overflow-x: visible;
     overflow: visible;
+    margin-top: 30px;
 }
 
 .testimonial-row-1 {
-    margin-top: 60px;
+    margin-top: 100px;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -676,7 +682,6 @@ body {
     height: 55vh;
     margin: 0 auto;
     overflow: hidden;
-    border: 2px solid #ccc;
     border-radius: 8px;
     position: relative;
 }
@@ -701,7 +706,7 @@ body {
 
 .testimonial-carousel-dp {
     width: 80%;
-    height: 60%;
+    height: 50%;
 }
 
 .testimonial-carousel-post {
@@ -754,6 +759,10 @@ body {
 
 .trust-heading-container {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .trust-heading {
@@ -762,6 +771,7 @@ body {
     font-size: 70px;
     font-style: italic;
     letter-spacing: -2.5px;
+    width: 80vw;
 }
 
 .trust-heading span {
@@ -841,6 +851,7 @@ body {
     flex-direction: column;
     overflow-x: visible;
     overflow-y: visible;
+    margin-bottom: 100px;
 }
 
 .contact-us-heading-container {
@@ -1002,7 +1013,7 @@ select {
     justify-content: space-between;
     align-items: center;
     width: 96%;
-    margin: 10px 0;
+    margin: 10px 0 0 0;
     align-self: flex-start;
 }
 
@@ -1148,18 +1159,17 @@ select {
         display: block;
     }
 
+    .our-goal-image {
+        height: 40vh;
+    }
+
     .content {
         margin-left: 0;
     }
 
     body {
-        background: linear-gradient(to bottom, #ffcc80 0%, white 18%);
+        background: linear-gradient(to bottom, #ffcc80 0%, white 8%);
         z-index: 100000000000;
-    }
-
-    .carousel-container {
-        height: 60%;
-        margin-top: 100px;
     }
     
     .hero {
@@ -1180,6 +1190,7 @@ select {
         width: 90%;
         text-align: center;
         align-items: center;
+        margin-bottom: 60px
     }
 
     .our-goal-para {
@@ -1213,7 +1224,7 @@ select {
     }
 
     body {
-        background: linear-gradient(to bottom, #ffcc80 0%, white 90%);
+        background: linear-gradient(to bottom, #ffcc80 0%, white 8%);
     }
     .navbar {
         display: none; /* Hide navbar */
@@ -1223,14 +1234,13 @@ select {
         display: flex; /* Show hamburger menu */
     }
 
-    .hero h1 {
-        font-size: 3rem;
-        line-height: 50px;
+    .hero {
+        margin-bottom: -10px;
     }
 
-    .carousel-item {
-        width: min(60vw, 300px); /* Adjusted width for smaller screens */
-        height: min(30vh, 200px); /* Adjusted height for smaller screens */
+    .hero h1 {
+        font-size: 3.5rem;
+        line-height: 50px;
     }
 
     .integrity-content {
@@ -1242,7 +1252,7 @@ select {
     }
 
     .inquire-button {
-        margin-bottom: 200px; /* Reduce gap below button */
+        margin-bottom: 10px; /* Reduce gap below button */
     }
     .row-of-circles {
         gap: 20px;
@@ -1273,9 +1283,37 @@ select {
     .trust-div-1, .trust-div-2 {
         gap: 120px;
     }
+
+    .carousel-container {
+        margin-top: 10px;
+    }
+
+    .download-button {
+        padding: 20px 30px;
+        overflow-y: hidden;
+    }
 }
 
 @media (max-width: 800px) {
+    .email-and-phone-number {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .city-and-state {
+        width: 100%;
+    }
+
+    #email, #phone {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .carousel-item {
+        width: 60vw;
+    }
+
     .challenges-heading {
         font-size: 55px;
     }
@@ -1285,6 +1323,7 @@ select {
     }
 
     .contact-us-section {
+        margin-top: 100px;
         height: auto;
     }
 
@@ -1297,14 +1336,20 @@ select {
     .contact-us-box2, .contact-us-box1 {
         height: auto;
         width: 100%;
+        margin-left: 0;
+    }
+
+    .contact-us-box1 {
+        flex-direction: column;
+    }
+
+    .contact-us-right {
+        flex-direction: row;
+        margin-bottom: 25px;
     }
 
     .contact-header-mail {
         font-size: 10px;
-    }
-
-    .contact-us-right {
-        display: none;
     }
 
     .challenges-bottom {
@@ -1332,8 +1377,14 @@ select {
 
 @media (max-width: 480px) {
 
+    .trust-byline {
+        width: 80vw;
+        align-self: center;
+        text-align: center;
+    }
+
     .contact-us-byline {
-        width: 90vw;
+        width: 80vw;
     }
 
     .trust-bottom, .trust-div-1, .trust-div-2 {
@@ -1345,13 +1396,8 @@ select {
     }
     
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
         line-height: 40px;
-    }
-
-    .carousel-item {
-        width: min(80vw, 250px); /* Adjusted width for smaller screens */
-        height: min(25vh, 150px); /* Adjusted height for smaller screens */
     }
 
     .heading-container {
@@ -1361,16 +1407,12 @@ select {
     .inquire-button {
         margin-bottom: 10px; /* Reduce gap below button */
     }
-
-    .carousel-container {
-        height: 70%;
-    }
     
     .hero {
         margin-top: -100px;
     }
     .carousel-indicators {
-        top: 90%;
+        top: 95%;
         gap: 20px;
     }
 

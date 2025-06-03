@@ -121,6 +121,18 @@
 }
 
 @media screen and (max-width: 800px) {
+    .contact-us-bottom {
+        flex-direction: column;
+        height: 20vh;
+        text-align: center;
+        align-items: center;
+    }
+
+    .contact-us-bottom-container {
+        width: 100%;
+        text-align: center;
+    }
+
     .footer-section {
         flex-direction: column;
         align-items: center;
@@ -129,7 +141,7 @@
     }
 
     .ed2-logo-footer {
-        width: 55vw;
+        width: 75vw;
     }
 
     .ed2-index-footer, .ed2-contact-us-footer {
@@ -243,4 +255,11 @@
 .navbar .dropdown:hover .dropdown-content,
 .navbar .dropdown:focus-within .dropdown-content {
     display: flex !important;
+}
+
+@media screen and (max-width: 800px) {
+
+    .navbar, .navbar .dropdown, .navbar .drobtn, .navbar .dropdown-content {
+        display: none;
+    }
 }
