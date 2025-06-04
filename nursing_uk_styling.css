@@ -582,6 +582,7 @@ body {
     align-items: center;
     flex-direction: column;
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .who-can-apply-heading {
@@ -759,10 +760,23 @@ body {
 
     .candidate-journey-container {
         height: auto;
-        width: 100%;
+        width: 30%;
         display: flex;
         justify-content: center;
         flex-direction: column;
+    }
+
+    .candidate-journey-triple-container, .candidate-journey-double-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        height: auto;
+    }
+
+    .candidate-journey-double-container {
+        justify-content: space-around;
+        align-items: flex-start;
     }
 
     .candidate-journey-img {

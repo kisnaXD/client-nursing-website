@@ -18,7 +18,19 @@ if (activeLink) {
     }
 }
 }
-
+const sm = document.getElementById('sm-linkedin');
+const vp = document.getElementById('vp-linkedin');
+const sk = document.getElementById('sk-linkedin');
+const rm = document.querySelector('.read-more-button')
+rm.addEventListener('click', () => {
+    window.location.href = "https://www.artemishospitals.com/about-us/why-artemis/management-team"
+})
+sm.addEventListener('click', () => {
+    window.location.href = 'https://www.linkedin.com/in/saras-malik-5b353898/'
+})
+vp.addEventListener('click', () => {
+    window.location.href = 'https://www.linkedin.com/in/ved-prakash-bb734338/';
+})
 navLinks.forEach(link => {
 link.addEventListener('click', function(e) {
     e.preventDefault();

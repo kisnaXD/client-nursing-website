@@ -19,6 +19,19 @@ function updateUnderline() {
     }
 }
 
+const ins = document.getElementById('ins-icon');
+const fb = document.getElementById('fb-icon');
+const lin = document.getElementById('lin-icon')
+ins.addEventListener('click', () => {
+    window.location.href = "www.instagram.com/ed2careers/";
+})
+fb.addEventListener('click', () => {
+    window.location.href = "www.facebook.com/ed2careers";
+})
+lin.addEventListener('click', () => {
+    window.location.href = "www.linkedin.com/company/ed2careers";
+})
+
 navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();

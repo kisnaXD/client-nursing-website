@@ -19,6 +19,19 @@ if (activeLink) {
 }
 }
 
+const ga = document.getElementById('ga-icon');
+const aa = document.getElementById('aa-icon');
+const ma = document.getElementById('ma-icon');
+ga.addEventListener('click', () => {
+    window.location.href = 'https://www.linkedin.com/in/geetanjali-alamshah/'
+})
+aa.addEventListener('click', () => {
+    window.location.href = 'https://www.linkedin.com/in/amanda-alamshah/'
+})
+ma.addEventListener('click', () => {
+    window.location.href = 'https://www.linkedin.com/in/manisha-agnihotri/'
+})
+
 navLinks.forEach(link => {
 link.addEventListener('click', function(e) {
     e.preventDefault();

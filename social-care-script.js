@@ -96,6 +96,95 @@ window.addEventListener('load', updateUnderline);
 window.addEventListener('resize', updateUnderline);
 
 document.addEventListener('DOMContentLoaded', () => {
+    const imgs = document.querySelectorAll('.tm-carousel-image');
+    const dots = document.querySelectorAll('.tm-dot');
+    let current = 0;
+    let timer = null;
+
+    function show(idx) {
+        if (!imgs.length) return;
+        imgs.forEach((img, i) => img.classList.toggle('active', i === idx));
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === idx));
+        current = idx;
+    }
+
+    function next() {
+        let nextIdx = (current + 1) % imgs.length;
+        show(nextIdx);
+    }
+
+    function startAuto() {
+        if (timer) clearInterval(timer);
+        timer = setInterval(next, 3000);
+    }
+
+    // Dot click
+    dots.forEach((dot, i) =>
+        dot.addEventListener('click', function() {
+        show(i);
+        startAuto();
+        })
+    );
+
+    // Init: show first image
+    if (imgs.length > 0) {
+        show(0);
+        if (imgs.length > 1) startAuto();
+    }
+
+    // Pause on hover/tap
+    const container = document.querySelector('.tm-carousel');
+    if (container) {
+        container.addEventListener('mouseenter', () => { if (timer) clearInterval(timer); });
+        container.addEventListener('mouseleave', startAuto);
+        container.addEventListener('touchstart', () => { if (timer) clearInterval(timer); }, {passive: true});
+        container.addEventListener('touchend', startAuto, {passive: true});
+    }
+
+    const imgs1 = document.querySelectorAll('.toc-carousel-image');
+    const dots1 = document.querySelectorAll('.toc-dot');
+    let current1 = 0;
+    let timer1 = null;
+
+    function show1(idx) {
+        if (!imgs1.length) return;
+        imgs1.forEach((img, i) => img.classList.toggle('active', i === idx));
+        dots1.forEach((dot, i) => dot.classList.toggle('active', i === idx));
+        current1 = idx;
+    }
+
+    function next1() {
+        let nextIdx = (current1 + 1) % imgs1.length;
+        show1(nextIdx);
+    }
+
+    function startAuto1() {
+        if (timer1) clearInterval(timer1);
+        timer1 = setInterval(next1, 3000);
+    }
+
+    // Dot click
+    dots1.forEach((dot, i) =>
+        dot.addEventListener('click', function() {
+        show1(i);
+        startAuto1();
+        })
+    );
+
+    // Init: show first image
+    if (imgs1.length > 0) {
+        show1(0);
+        if (imgs1.length > 1) startAuto1();
+    }
+
+    // Pause on hover/tap
+    const container1 = document.querySelector('.toc-carousel');
+    if (container1) {
+        container1.addEventListener('mouseenter', () => { if (timer1) clearInterval(timer1); });
+        container1.addEventListener('mouseleave', startAuto1);
+        container1.addEventListener('touchstart', () => { if (timer1) clearInterval(timer1); }, {passive: true});
+        container1.addEventListener('touchend', startAuto1, {passive: true});
+    }
     document.getElementById('hamburger-menu').addEventListener('click', function() {
         document.getElementById('sidebar').classList.toggle('active');
     });

@@ -16,7 +16,7 @@
 body {
     font-family: "Instrument Sans", sans-serif;
     overflow-x: hidden;
-    background: linear-gradient(to bottom, #ffcc80 0%, #ffffff 25%);
+    background: linear-gradient(to bottom, #ffcc80 0%, #ffffff 10%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -384,9 +384,63 @@ body {
     height: auto;
 }
 
-.training-methodology-right-image {
-    height: 40vh;
+.training-methodology-right {
+    height: 42vh;
     width: 47.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tm-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(72, 72, 128, 0.08);
+}
+.tm-carousel-image {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 95%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.8s cubic-bezier(.4,.23,.3,1);
+    border-radius: inherit;
+    display: block;
+    pointer-events: none;
+}
+.tm-carousel-image.active {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
+}
+.tm-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    left: 0; right: 0; bottom: 12px;
+    z-index: 10;
+}
+.tm-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #bbb;
+    display: inline-block;
+    transition: background 0.25s;
+    cursor: pointer;
+}
+.tm-dot.active {
+    background: #8A6EFF;
+}
+@media (max-width: 800px) {
+    .tm-carousel { max-width: 98vw; }
 }
 
 .training-methodology-left-text {
@@ -422,7 +476,8 @@ body {
     background: #c3b5ff;
     border-radius: 30px;
     padding: 2px 0px; /* Reduced vertical padding */
-    width: 320px;
+    min-width: 320px;
+    width: auto;
     height: 40px;
     overflow: hidden;
     white-space: nowrap;
@@ -481,7 +536,6 @@ body {
 .selection-bottom-row-1, .selection-bottom-row-2 {
     display: none;
     justify-content: center;
-    align-items: center;
     width: 100%;
     gap: 2.5%;
     transform: translateY(50px);
@@ -496,6 +550,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    align-self: center;
     gap: 2vh;
 }
 
@@ -662,15 +717,66 @@ body {
     font-weight: 550;
 }
 
-.meet-our-candidates-right-image {
+.meet-our-candidates-right {
     width: 47.5%;
-    height: 35vh;
+    height: 40vh;
     background: transparent;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+
+.toc-carousel {
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(72, 72, 128, 0.08);
+}
+.toc-carousel-image {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 95%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.8s cubic-bezier(.4,.23,.3,1);
+    border-radius: inherit;
+    display: block;
+    pointer-events: none;
+}
+.toc-carousel-image.active {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
+}
+.toc-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    left: 0; right: 0; bottom: 0px;
+    z-index: 10;
+}
+.toc-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #bbb;
+    display: inline-block;
+    transition: background 0.25s;
+    cursor: pointer;
+}
+.toc-dot.active {
+    background: #8A6EFF;
+}
+@media (max-width: 800px) {
+    .toc-carousel { max-width: 98vw; }
 }
 
 .meet-our-candidates-right-image-file {
@@ -783,14 +889,27 @@ body {
 
     .candidate-journey-container {
         height: auto;
-        width: 90%;
+        width: 30%;
         display: flex;
         justify-content: center;
         flex-direction: column;
     }
 
+    .candidate-journey-triple-container, .candidate-journey-double-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        height: auto;
+    }
+
+    .candidate-journey-double-container {
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
     .candidate-journey-img {
-        height: 40vh;
+        height: 15vh;
         width: 100%;
     }
 
@@ -804,7 +923,7 @@ body {
     }
 
     .right {
-        text-align: right;
+        text-align: center;
     }
 
     .training-include-heading {
@@ -823,7 +942,7 @@ body {
         gap: 2.5vh;
     }
 
-    .training-methodology-left-text, .training-methodology-right-image {
+    .training-methodology-left-text, .training-methodology-right {
         width: 100%;
     }
 
@@ -873,7 +992,7 @@ body {
         gap: 2vh;
     }
 
-    .meet-our-candidates-left-text, .meet-our-candidates-right-image {
+    .meet-our-candidates-left-text, .meet-our-candidates-right {
         width: 100%;
     }
 
@@ -950,3 +1069,4 @@ body {
         display: flex; /* Show hamburger menu */
     }
 }
+
