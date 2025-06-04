@@ -274,7 +274,7 @@ body {
 }
 
 .candidate-journey-heading {
-    font-size: 64px;
+    font-size: 60px;
     font-family: "Instrument Serif", sans-serif;
     font-style: italic;
     letter-spacing: -2.5px;
@@ -317,7 +317,7 @@ body {
 }
 
 .training-include-heading {
-    font-size: 64px;
+    font-size: 60px;
     font-family: "Instrument Serif", sans-serif;
     font-style: italic;
     color: #8A6EFF;
@@ -422,7 +422,7 @@ body {
     background: #c3b5ff;
     border-radius: 30px;
     padding: 2px 0px; /* Reduced vertical padding */
-    min-width: 300px;
+    width: 320px;
     height: 40px;
     overflow: hidden;
     white-space: nowrap;
@@ -527,7 +527,7 @@ body {
 }
 
 .our-advantage-heading {
-    font-size: 64px;
+    font-size: 60px;
     color: #8A6EFF;
     font-family: "Instrument Serif", sans-serif;
     font-style: italic;
@@ -545,7 +545,7 @@ body {
 }
 
 .who-can-apply-heading {
-    font-size: 64px;
+    font-size: 60px;
     color: #8A6EFF;
     font-weight: 350;
     font-family: "Instrument Serif", sans-serif;
@@ -618,7 +618,7 @@ body {
 }
 
 .meet-our-candidates-heading {
-    font-size: 64px;
+    font-size: 60px;
     font-weight: 350;
     font-family: "Instrument Serif", sans-serif;
     font-style: italic;
@@ -665,8 +665,18 @@ body {
 .meet-our-candidates-right-image {
     width: 47.5%;
     height: 35vh;
-    background: #d9d9d9;
+    background: transparent;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.meet-our-candidates-right-image-file {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .your-workforce-section {
@@ -677,6 +687,7 @@ body {
     align-items: center;
     flex-direction: column;
     margin-top: 100px;
+    margin-bottom: 200px;
 }
 
 .your-workforce-heading {
@@ -684,7 +695,7 @@ body {
     font-style: italic;
     font-family: "Instrument Serif", sans-serif;
     font-weight: 350;
-    font-size: 64px;
+    font-size: 60px;
 }
 
 .your-workforce-heading span {
@@ -746,13 +757,14 @@ body {
     }
 
     .candidate-journey-heading {
-        font-size: 54px;
+        font-size: 45px;
         text-align: center;
         align-self: center;
     }
 
     .candidate-journey-byline {
         width: 100%;
+        font-size: 18px;
         text-align: center;
         align-self: center;
     }
@@ -770,7 +782,7 @@ body {
 
     .candidate-journey-container {
         height: auto;
-        width: 100%;
+        width: 90%;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -797,7 +809,7 @@ body {
     .training-include-heading {
         text-align: center;
         width: 100vw;
-        font-size: 54px;
+        font-size: 45px;
     }
 
     .training-include-row-1, .training-include-row-2 {
@@ -883,6 +895,14 @@ body {
         gap: 2.5vh;
     }
 
+    .selection-process-section {
+        width: 100vw;
+    }
+
+    .selection-navbar {
+        width: 320px;
+    }
+
     .selection-heading {
         width: 100%;
         text-align: center; 
@@ -899,7 +919,7 @@ body {
     }
 
     .selection-bottom-container-1, .selection-bottom-container-2, .selection-bottom-container-3, .selection-bottom-container-4, .selection-bottom-container-5, .selection-bottom-container-6, .selection-bottom-container-7, .selection-bottom-container-8 {
-        width: 100%;
+        width: 90%;
     }
 }
 
