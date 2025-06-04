@@ -286,7 +286,7 @@ body {
     align-items: center;
     overflow: hidden;
     z-index: 100;
-    margin-top: 150px;
+    margin-top: 200px;
 }
 
 .carousel {
@@ -306,7 +306,6 @@ body {
     max-width: 450px;
     height: 100%;  /* Increased height */
     background-color: #fff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     overflow: hidden;
     transition: all 1s ease;
     border-radius: 10px;
@@ -326,7 +325,7 @@ body {
 
 .carousel-indicators {
     position: absolute;
-    top: 75%; /* Positioned 30px below the carousel */
+    top: 95%; /* Positioned 30px below the carousel */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -448,7 +447,7 @@ body {
     align-items: center;
     width: 90vw;
     gap: 5vw;
-    margin: 100px 5vw;
+    margin: 0px 5vw 100px 5vw;
     overflow-x: visible;
     overflow: visible;
 }
@@ -589,7 +588,6 @@ body {
     width: 100vw;
     overflow-x: visible;
     overflow: visible;
-    margin-top: 30px;
 }
 
 .testimonial-row-1 {
@@ -662,12 +660,12 @@ body {
     padding: 20px;
     text-align: center;
     font-family: 'Instrument Serif', sans-serif;
-    background: linear-gradient(to top left, #ffcc80 -40%, white 40%);
+    background: linear-gradient(to top left, #ffcc80 -60%, white 40%);
     display: none;
     width: 100vw;
     height: auto;
     padding-bottom: 100px;
-    margin-top: -50px;
+    margin-top: 0px;
 }
   
 .testimonials-heading-phone {
@@ -1106,12 +1104,12 @@ select {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 100px 0;
+    padding: 80px 0;
     overflow-y: hidden;
 }
 
 .sidebar a {
-    padding: 20px 15px;
+    padding: 10px 15px;
     text-decoration: none;
     font-size: 22px;
     color: #818181;
@@ -1160,7 +1158,7 @@ select {
     }
 
     .our-goal-image {
-        height: 40vh;
+        height: 37vh;
     }
 
     .content {

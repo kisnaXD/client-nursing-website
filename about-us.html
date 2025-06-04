@@ -35,13 +35,13 @@
     </div>
     <div class="sidebar" id="sidebar">
         <span class="closebtn" id="closebtn">&times;</span>
-        <a href="#" class="active">Home</a>
-        <a href="#">Services</a>
-        <a href="#">About Us</a>
-        <a href="#">Social Care</a>
-        <a href="#">Nursing UK</a>
-        <a href="#">Nursing Australia</a>
-        <a href="#">Artemis Partnership</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about-us.html">About Us</a>
+        <a href="social-care.html">Social Care</a>
+        <a href="nursing_uk.html">Nursing UK</a>
+        <a href="nursing_australia.html">Nursing Australia</a>
+        <a href="artemis.html">Artemis Partnership</a>
         <div class="bottom-content">
             <img src="./assets/bg_logo.png" alt="Logo">
             <p>Ed2Careers</p>
@@ -53,21 +53,11 @@
                 <img src="./assets/about_us_hero.png" alt="" class="hero-left-image-file" id="heroMainImage">
             </div>
             <div class="hero-right-images">
-                <div class="video-thumb hero-right-small" data-video="assets/video1.mp4" style="background-image: url('assets/about_us_hero.png')">
-                    <span>Video 1</span>
-                </div>
-                <div class="video-thumb hero-right-small" data-video="assets/video2.mp4" style="background-image: url('assets/about_us_hero.png')">
-                    <span>Video 2</span>
-                </div>
-                <div class="video-thumb hero-right-small" data-video="assets/video3.mp4" style="background-image: url('assets/about_us_hero.png')">
-                    <span>Video 3</span>
-                </div>
-                <div class="video-thumb hero-right-small" data-video="assets/video4.mp4" style="background-image: url('assets/about_us_hero.png')">
-                    <span>Video 4</span>
-                </div>
-                <div class="video-thumb hero-right-small" data-video="assets/video5.mp4" style="background-image: url('assets/about_us_hero.png')">
-                    <span>Video 5</span>
-                </div>
+                <div class="video-thumb hero-right-small" data-video="assets/video1.mp4" style="background-image: url('assets/about_us_hero.png')"></div>
+                <div class="video-thumb hero-right-small" data-video="assets/video2.mp4" style="background-image: url('assets/about_us_hero.png')"></div>
+                <div class="video-thumb hero-right-small" data-video="assets/video3.mp4" style="background-image: url('assets/about_us_hero.png')"></div>
+                <div class="video-thumb hero-right-small" data-video="assets/video4.mp4" style="background-image: url('assets/about_us_hero.png')"></div>
+                <div class="video-thumb hero-right-small" data-video="assets/video5.mp4" style="background-image: url('assets/about_us_hero.png')"></div>
             </div>
         </div>
         <div class="hero-text">
@@ -108,30 +98,32 @@
     <section class="lets-connect-section-mobile">
         <div class="lets-connect-button">Let's Connect</div>
         <div class="lets-connect-bottom">
-            <div class="stat-block">
-                <div class="stat-value">100%</div>
-                <div class="stat-label">Visa Acceptance</div>
+            <button class="carousel-arrow left" id="statCarouselLeft">&#8592;</button>
+            <div class="carousel-track" id="statCarouselTrack">
+                <div class="stat-block">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Visa Acceptance</div>
+                </div>
+                <div class="stat-block">
+                    <div class="stat-value">97%</div>
+                    <div class="stat-label">OSCE Pass Rate</div>
+                </div>
+                <div class="stat-block">
+                    <div class="stat-value">200+</div>
+                    <div class="stat-label">Successful Placements</div>
+                </div>
+                <div class="stat-block">
+                    <div class="stat-value">15+</div>
+                    <div class="stat-label">Partner Hospitals</div>
+                </div>
+                <div class="stat-block">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Ethical Pathways</div>
+                </div>
             </div>
-            <div class="stat-block">
-                <div class="stat-value">97%</div>
-                <div class="stat-label">OSCE Pass Rate</div>
-            </div>
-            <div class="stat-block">
-                <div class="stat-value">200+</div>
-                <div class="stat-label">Successful Placements</div>
-            </div>
-            <div class="stat-block">
-                <div class="stat-value">15+</div>   
-                <div class="stat-label">Partner Hospitals</div>
-            </div>
-            <div class="stat-block">
-                <div class="stat-value">100%</div>
-                <div class="stat-label">Ethical Pathways</div>
-            </div>
-            <div class="lets-connect-heading">
-                Empowering <span>Individuals</span> <br>Easing <span>Workforce Challenges</span> <br>Driving Changes <span>Globally & Locally</span>
-            </div>
+            <button class="carousel-arrow right" id="statCarouselRight">&#8594;</button>
         </div>
+        <div class="carousel-indicators" id="statCarouselIndicators"></div>
     </section>
     <section class="our-story-section">
         <div class="our-story-heading">Our <span>Story</span></div>

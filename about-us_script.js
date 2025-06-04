@@ -53,8 +53,69 @@ link.addEventListener('click', function(e) {
 
 window.addEventListener('load', updateUnderline);
 window.addEventListener('resize', updateUnderline);
-
 document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('statCarouselTrack');
+  if (track) {
+    const blocks = Array.from(track.querySelectorAll('.stat-block'));
+    const leftBtn = document.getElementById('statCarouselLeft');
+    const rightBtn = document.getElementById('statCarouselRight');
+    const indicatorsContainer = document.getElementById('statCarouselIndicators');
+    let currentIndex = 0;
+    const total = blocks.length;
+
+    // Create indicators
+    indicatorsContainer.innerHTML = '';
+    blocks.forEach((_, idx) => {
+      const dot = document.createElement('div');
+      dot.className = 'dot' + (idx === 0 ? ' active' : '');
+      dot.addEventListener('click', () => goToIndex(idx));
+      indicatorsContainer.appendChild(dot);
+    });
+
+    function updateCarousel() {
+      const slideWidth = track.offsetWidth;
+      const offset = -currentIndex * slideWidth;
+      track.style.transform = `translateX(${offset}px)`;
+
+      // Update indicators
+      Array.from(indicatorsContainer.children).forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentIndex);
+      });
+      // Disable arrows at ends (optional for infinite loop)
+      leftBtn.disabled = (currentIndex === 0);
+      rightBtn.disabled = (currentIndex === total - 1);
+    }
+
+    function goToIndex(idx) {
+      if (idx < 0) idx = 0;
+      if (idx >= total) idx = total - 1;
+      currentIndex = idx;
+      updateCarousel();
+    }
+
+    leftBtn && (leftBtn.onclick = () => goToIndex(currentIndex - 1));
+    rightBtn && (rightBtn.onclick = () => goToIndex(currentIndex + 1));
+
+    // Swipe support for mobile
+    let startX = 0;
+    let isDown = false;
+    track.addEventListener('touchstart', function(e) {
+      isDown = true;
+      startX = e.touches[0].clientX;
+    });
+    track.addEventListener('touchend', function(e) {
+      if (!isDown) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      if (dx > 40) goToIndex(currentIndex - 1);
+      else if (dx < -40) goToIndex(currentIndex + 1);
+      isDown = false;
+    });
+
+    // Responsive: recalculate offset on resize
+    window.addEventListener('resize', updateCarousel);
+
+    updateCarousel();
+  }
     document.getElementById('hamburger-menu').addEventListener('click', function() {
         document.getElementById('sidebar').classList.toggle('active');
     });

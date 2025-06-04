@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const nextIndex = (centerIndex + 1) % totalItems;
 
         // Decrease the spacing between images
-        const sideTranslateX = viewportWidth * 0.46;  // Decreased spacing
+        const sideTranslateX = viewportWidth > 1000 ? viewportWidth * 0.46 : viewportWidth * 0.72;  // Decreased spacing
         
         // Make only three visible items displayed
         items[prevIndex].style.display = 'block';

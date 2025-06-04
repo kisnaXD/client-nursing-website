@@ -136,7 +136,7 @@ body {
 }
 
 .sidebar {
-    height: 100%;
+    height: 100vh;
     width: 0;
     position: fixed;
     top: 0;
@@ -144,16 +144,17 @@ body {
     background-color: #111;
     overflow-x: hidden;
     transition: width 1s ease;
-    z-index: 10001;
-    padding-top: 0px;
+    z-index: 10000000000001;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 80px 0;
+    overflow-y: hidden;
 }
 
 .sidebar a {
-    padding: 20px 15px;
+    padding: 10px 15px;
     text-decoration: none;
     font-size: 22px;
     color: #818181;
@@ -170,12 +171,14 @@ body {
 
 .sidebar.active {
     width: 90%;
+    z-index: 10000000000000;
 }
 
 .bottom-content {
     position: absolute;
-    bottom: 20px;
+    bottom: 100px;
     text-align: center;
+    overflow-y: hidden;
 }
 
 .bottom-content img {
@@ -199,7 +202,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 80vh; 
+    height: auto;
     width: 80vw;
     margin-top: 0px;
 }
@@ -212,16 +215,24 @@ body {
 }
 
 .hero-left-image {
-    width: 71.25%;
-    height: 66.5vh;
+    width: 71.25%;         /* or whatever is your desired width */
+    height: 66.5vh;        /* or whatever is your desired height */
     border-radius: 30px;
     border: none;
-}
-
-.hero-left-image-file {
-    width: 100%;
-    height: 100%;
-}
+    overflow: hidden;      /* <--- Add this line */
+    display: flex;         /* <--- Add this line to help with centering if needed */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-left-image-file {
+    width: 100%;           /* <--- Make sure this is set */
+    height: 100%;          /* <--- Make sure this is set */
+    object-fit: cover;     /* <--- This is the key for cropping instead of stretching */
+    object-position: center; /* <--- Optional, keeps the focal point centered */
+    border-radius: 30px;   /* or match parent for smooth edges */
+    display: block;
+  }
 
 .hero-right-images {
     display: flex;
@@ -353,7 +364,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 80vw;
-    height: 120vh;
+    height: auto;
     flex-direction: column;
     gap: 3vh;
 }
@@ -453,6 +464,7 @@ body {
     height: 70vh;
     width: 80vw;
     gap:5vh;
+    margin-top: 100px;
 }
 
 .life-at-ed2-heading {
@@ -608,6 +620,7 @@ body {
     flex-direction: column;
     height: auto;
     width: 100vw;
+    margin: 100px 0;
 }
 
 .meet-the-team-section-heading {
@@ -630,7 +643,7 @@ body {
     width: 87.5vw;
     gap: 5vw;
     height: auto;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .side-leaders-container-1, .side-leaders-container-2, .side-leaders-container-3 {
@@ -732,11 +745,21 @@ body {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 800px) { 
+
+    .meet-the-team-bottom {
+        flex-direction: column;
+        gap: 10vh;
+    }
+
+    .team-container-1, .team-container-2, .team-container-3 {
+        width: 75vw;
+    }
 
     .our-story-section {
         height: 170vh;
-        margin: 0;
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
     .our-story-part-1, .our-story-part-2 {
         flex-direction: column;
@@ -785,7 +808,7 @@ body {
     }
 
     .hero-section {
-        height: 100vh;
+        height: auto;
         width: 80vw;
     }
 
@@ -823,44 +846,6 @@ body {
         display: none;
     }
 
-    .lets-connect-section-mobile {
-        height: auto;
-        width: 80vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 2vh;
-        margin-top: 0;
-    }
-
-    .stat-block, .center-text {
-        position: static;
-    }
-
-    .stat-block {
-        width: 60vw;
-        align-self: center;
-        justify-self: center;
-    }
-
-    .center-text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        align-self: center;
-        justify-self: center;
-    }
-
-    .lets-connect-bottom {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 1.2vh;
-    }
-
     .lets-connect-heading {
         font-size: 32px;
         font-style: italic;
@@ -877,3 +862,137 @@ body {
         font-weight: 600;
     }
 }
+
+@media (max-width: 800px) {
+    .lets-connect-section {
+      display: none;
+    }
+  
+    .lets-connect-section-mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      margin-top: 0;
+      gap: 1.2vh;
+    }
+  
+    .lets-connect-bottom {
+      width: 100vw;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      min-height: 170px;
+      margin: 0 auto;
+      padding: 0;
+      background: transparent;
+    }
+  
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #fff;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 2;
+      height: 46px;
+      width: 46px;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(138,110,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.85;
+      transition: opacity 0.2s, background 0.2s;
+      user-select: none;
+      color: #8A6EFF;
+      font-family: inherit;
+      font-weight: bold;
+    }
+    .carousel-arrow.left { left: 6px; right: auto; }
+    .carousel-arrow.right { right: 6px; left: auto; }
+    .carousel-arrow:disabled { opacity: 0.3; cursor: default; }
+  
+    .carousel-track {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      transition: transform 0.4s cubic-bezier(.4,.23,.3,1);
+      will-change: transform;
+      width: 80vw;
+      margin: 0 auto;
+      /* No overflow here; parent handles it */
+    }
+  
+    .lets-connect-section-mobile .stat-block {
+      position: static !important;
+      flex: 0 0 76vw; /* 76vw plus 4vw margin gives 80vw per slide */
+      max-width: 76vw;
+      min-width: 76vw;
+      margin: 0 2vw;
+      min-height: 120px;
+      background-color: rgba(255,204,108,0.2);
+      border: 2px solid #ffcc80;
+      border-radius: 8px;
+      box-shadow: 0 1.5px 2px rgba(0, 0, 0, 0.1);
+      padding: 18px 0 12px 0;
+      text-align: center;
+      font-family: "Instrument Sans", sans-serif;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .lets-connect-section-mobile .stat-value {
+      font-size: 40px;
+      font-weight: bold;
+      color: #ffb335;
+      margin-bottom: 2px;
+    }
+    .lets-connect-section-mobile .stat-label {
+      font-size: 14px;
+      color: #403219;
+      font-weight: 500;
+    }
+  
+    .lets-connect-heading {
+      font-size: 1.3rem;
+      font-style: italic;
+      font-family: "Instrument Serif",sans-serif;
+      color: #403219;
+      width: 80vw;
+      text-align: center;
+      font-weight: 350;
+      margin: 12px auto 4px auto;
+    }
+    .lets-connect-heading span {
+      font-style: normal;
+      font-family: "Instrument Sans", sans-serif;
+      font-weight: 600;
+    }
+  
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      margin-top: 10px;
+      min-height: 16px;
+    }
+    .carousel-indicators .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ccc;
+      transition: background 0.2s;
+      cursor: pointer;
+    }
+    .carousel-indicators .dot.active {
+      background: #8A6EFF;
+    }
+  }

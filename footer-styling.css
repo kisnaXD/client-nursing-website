@@ -5,6 +5,8 @@
     width: 100vw;
     padding: 7.5vw;
     height: 350px;
+    overflow-y: hidden;
+    margin-top: 50px;
 }
 
 .ed2-logo-footer {
@@ -148,6 +150,10 @@
         align-self: center;
         width: 100%;
         margin-bottom: 5vh;
+    }
+
+    .contact-us-icons {
+        width: 90%;
     }
 
     .footer-heading {
