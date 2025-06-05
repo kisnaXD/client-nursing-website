@@ -782,7 +782,7 @@ body {
     }
 
     .candidate-journey-img {
-        height: 40vh;
+        height: 15vh;
         width: 100%;
     }
 
@@ -847,17 +847,13 @@ body {
     }
 
     .smaller-font {
-        font-size: 12px;
-        padding: 20px;
+        font-size: 10px;
+        padding: 22px;
     }
 
     .ielts {
         font-size: 14px;
         padding: 20px;
-    }
-
-    .oet {
-        padding: 30px;
     }
 
     .who-can-apply-bottom-button-phone {
@@ -873,36 +869,44 @@ body {
         color: #ffeac8;
     }
 
+    .phone-small {
+        font-size: 13px;
+    }
+
+    .phone-chota {
+        font-size: 11px;
+    }
+
     .custom-3, .custom-2, .custom-1 {
-        height: 25vh;
+        height: 50vh;
     }
 
     .custom-5, .custom-6, .custom-4 {
-        height: 21vh;
+        height: 45vh;
     }
 
     .custom-7, .custom-9, .custom-8 {
-        height: 18vh;
+        height: 40vh;
     }
 
     .custom-10, .custom-12, .custom-11 {
-        height: 20vh;
+        height: 35vh;
     }
 
     .custom-13, .custom-15, .custom-14 {
-        height: 20vh;
+        height: 35vh;
     }
 
     .custom-16, .custom-18, .custom-17 {
-        height: 32vh;
+        height: 50vh;
     }
 
     .custom-19, .custom-21, .custom-20 {
-        height: 18vh;
+        height: 35vh;
     }
 
     .custom-22, .custom-24, .custom-23 {
-        height: 25vh;
+        height: 50vh;
     }
 }
 

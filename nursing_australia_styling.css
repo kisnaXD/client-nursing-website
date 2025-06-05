@@ -1054,7 +1054,7 @@ body {
     }
 
     .ahrpa-who-can-apply-heading {
-        width: 34vw;
+        width: 100vw;
         font-size: 20px;
     }
 
@@ -1148,31 +1148,31 @@ body {
     }
 
     .ahrpa-byline-heading {
-        width: 60vw;
+        width: 100vw;
         font-size: 20px;
     }
 
     .ahrpa-highlights-heading {
-        width: 36vw;
-        font-size: 20px;
+        width: 100vw;
+        font-size: 18px;
     }
 
     .not-ahrpa-heading {
-        width: 90vw;
+        width: 100vw;
         font-size: 20px;
     }
 
     .nclex-includes {
-        width: 53vw;
+        width: 100vw;
         font-size: 20px;
     }
     
     .osce-covers-heading {
-        width: 56vw;
+        width: 100vw;
     }
 
     .sub-heading {
-        width: 35vw;
+        width: 100vw;
         font-size: 20px;
     }
 }
@@ -1206,33 +1206,35 @@ body {
 
 @media (max-width: 500px) {
 
+    .ahrpa-byline-small {
+        font-size: 15px;
+    }
 
     .ahrpa-byline-heading {
-        width: 98vw;
-        font-size: 20px;
+        width: 100vw;
     }
 
     .ahrpa-highlights-heading {
-        width: 50vw;
+        width: 100vw;
         font-size: 20px;
     }
 
     .not-ahrpa-heading {
-        width: 98vw;
+        width: 100vw;
         font-size: 20px;
     }
 
     .nclex-includes {
-        width: 70vw;
+        width: 100vw;
         font-size: 20px;
     }
     
     .osce-covers-heading {
-        width: 72vw;
+        width: 100vw;
     }
 
     .sub-heading {
-        width: 42vw;
+        width: 100vw;
         font-size: 20px;
     }
 }
