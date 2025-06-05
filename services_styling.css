@@ -205,6 +205,7 @@ body {
     margin-left: 200px;
     padding: 16px;
 }
+
 .hero-left-paragraph {
     font-size: 20px;
 }
@@ -333,6 +334,7 @@ body {
     flex-direction: column;
     transition: all 0.65s ease-in-out;
     padding: 20px 0;
+    cursor: pointer;
 }
 
 .courses-container-1:hover, .courses-container-2:hover, .courses-container-3:hover {

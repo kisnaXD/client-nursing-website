@@ -19,6 +19,15 @@ if (activeLink) {
 }
 }
 
+const socialCare = document.querySelector('.courses-container-1');
+const nursing = document.querySelector('.courses-container-2');
+socialCare.addEventListener('click', () => {
+  window.location.href = "social-care.html";
+})
+nursing.addEventListener('click', () => {
+  window.location.href = "nursing_uk.html";
+})
+
 navLinks.forEach(link => {
 link.addEventListener('click', function(e) {
     e.preventDefault();

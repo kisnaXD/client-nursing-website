@@ -145,7 +145,7 @@ body {
 }
 
 .sidebar {
-    height: 100%;
+    height: 100vh;
     width: 0;
     position: fixed;
     top: 0;
@@ -153,16 +153,17 @@ body {
     background-color: #111;
     overflow-x: hidden;
     transition: width 1s ease;
-    z-index: 10001;
-    padding-top: 0px;
+    z-index: 10000000000001;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 80px 0;
+    overflow-y: hidden;
 }
 
 .sidebar a {
-    padding: 20px 15px;
+    padding: 10px 15px;
     text-decoration: none;
     font-size: 22px;
     color: #818181;
@@ -179,12 +180,14 @@ body {
 
 .sidebar.active {
     width: 90%;
+    z-index: 10000000000000;
 }
 
 .bottom-content {
     position: absolute;
-    bottom: 20px;
+    bottom: 100px;
     text-align: center;
+    overflow-y: hidden;
 }
 
 .bottom-content img {
@@ -202,6 +205,7 @@ body {
     margin-left: 200px;
     padding: 16px;
 }
+
 
 .hero-section {
     margin-top: -20px;
@@ -223,7 +227,6 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
 }
 
 .artemis-image {
@@ -231,7 +234,6 @@ body {
     width: 100%;
     min-width: 900px;
     border-radius: 10px;
-    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
 }
 
 .hero-paragraph {
@@ -390,6 +392,7 @@ body {
 .ahrpa-section-byline {
     margin-top: 50px;
     width: 100vw;
+    gap: 1vw;
     height: auto;
     display: flex;
     justify-content: center;
@@ -399,9 +402,10 @@ body {
 
 .ahrpa-byline-heading {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 41vw;
+    width: 100vw;
+    gap: 1vw;
     height: auto;
     font-family: "Instrument Saans", sans-serif;
     font-size: 40px;
@@ -439,9 +443,10 @@ body {
 
 .ahrpa-highlights-heading {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 20vw;
+    width: 100vw;
+    gap: 1vw;
 }
 
 .ahrpa-byline-small {
@@ -478,8 +483,8 @@ body {
 }
 
 .ahrpa-highlights-container-img {
-    width: 100%;
-    height: 35vh;
+    width: 80%;
+    height: 30vh;
 }
 
 .ahrpa-highlights-container-text {
@@ -508,9 +513,10 @@ body {
 
 .ahrpa-who-can-apply-heading {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 16vw;
+    width: 100vw;
+    gap: 1vw;
 }
 
 .ahrpa-who-can-apply-bottom {
@@ -564,9 +570,10 @@ body {
 
 .not-ahrpa-heading {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 44vw;
+    width: 100vw;
+    gap: 1vw;
     margin-top: 40px;
 }
 
@@ -641,8 +648,9 @@ body {
 
 .nclex-includes {
     display: flex;
-    justify-content: space-between;
-    width: 25vw;
+    justify-content: center;
+    gap: 1vw;
+    width: 100vw;
     height: auto;
     align-items: center;
     margin-top: 20px;
@@ -705,9 +713,10 @@ body {
 
 .osce-covers-heading {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 1vw;
     align-items: center;
-    width: 27vw;
+    width: 100vw;
 }
 
 .get-ready-button {
@@ -792,9 +801,10 @@ body {
 }
 
 .sub-heading {
-    width: 16vw;
+    width: 100vw;
+    gap: 1vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 

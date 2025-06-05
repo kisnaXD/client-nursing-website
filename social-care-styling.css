@@ -207,7 +207,7 @@ body {
 }
 
 .artemis-image-wrapper {
-    height: 70vh;
+    height: 60vh;
     width: 80vw;
     overflow: hidden;
     display: flex;
@@ -407,6 +407,7 @@ body {
     width: 100%;
     height: 95%;
     opacity: 0;
+    object-fit: cover;
     z-index: 1;
     transition: opacity 0.8s cubic-bezier(.4,.23,.3,1);
     border-radius: inherit;
@@ -741,9 +742,10 @@ body {
     position: absolute;
     left: 0; top: 0;
     width: 100%;
-    height: 95%;
+    height: 90%;
     opacity: 0;
     z-index: 1;
+    object-fit: contain;
     transition: opacity 0.8s cubic-bezier(.4,.23,.3,1);
     border-radius: inherit;
     display: block;
@@ -824,15 +826,16 @@ body {
 }
 
 .your-workforce-right {
-    height: 30vh;
+    height: 55vh;
     width: 46%;
     font-family: "Instrument Sans", sans-serif;
     font-size: 18px;
     color: #403219;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    gap: 10vh;
 }
 
 .your-workforce-right-button {

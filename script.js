@@ -49,6 +49,15 @@ navLinks.forEach(link => {
         if(this.innerText === "About Us") {
             window.location.href = "about-us.html"
         }
+        if(this.innerText === "Social Care") {
+            window.location.href = "social-care.html"
+        }
+        if(this.innerText === "Nursing UK") {
+            window.location.href = "nursing_uk.html"
+        }
+        if(this.innerText === "Nursing Australia") {
+            window.location.href = "nursing_australia.html"
+        }
         requestAnimationFrame(() => {
             updateUnderline();
         });
@@ -78,9 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---- CAROUSEL CODE ----
 
     const images = [
-        'https://picsum.photos/id/1015/800/600',
-        'https://picsum.photos/id/1016/800/600', 
-        'https://picsum.photos/id/1018/800/600'
+        './assets/hero-carousel-1.png',
+        './assets/hero-carousel-2.gif', 
+        './assets/hero-carousel-3.png'
     ];
 
     const carousel = document.getElementById('carousel');
