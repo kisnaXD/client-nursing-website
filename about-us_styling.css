@@ -215,11 +215,10 @@ body {
 }
 
 .hero-left-image {
-    width: 71.25%;         /* or whatever is your desired width */
+    width: 80%;         /* or whatever is your desired width */
     height: 66.5vh;        /* or whatever is your desired height */
     border-radius: 30px;
     border: none;
-    overflow: hidden;      /* <--- Add this line */
     display: flex;         /* <--- Add this line to help with centering if needed */
     justify-content: center;
     align-items: center;
@@ -240,7 +239,7 @@ body {
     align-items: center;
     flex-direction: column;
     height: 61.5vh;
-    width: 21.25%;
+    width: 12.5%;
     gap: 3%;
 }
 
@@ -400,18 +399,18 @@ body {
 }
 
 .our-story-image {
-    height: 90%;
+    height: 28vh;
     width: 50%;
 }
 
 .our-story-text {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    flex-direction: column;
-    height: 90%;
+    height: 28vh;
     width: 45%;
-    gap: 5%;
+    gap: 5vh;
 }
 
 .our-story-para {
@@ -419,13 +418,16 @@ body {
     font-family: "Instrument Sans", sans-serif;
     color: #403219;
     font-weight: 350;   
+    height: auto;
+    justify-self: flex-start;
 }
 
 .follow-us {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: auto;
+    height: auto;
 }
 
 .follow-us-button {
@@ -461,10 +463,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 70vh;
+    height: auto;
     width: 80vw;
     gap:5vh;
-    margin-top: 100px;
+    margin: 100px 0 0 0;
 }
 
 .life-at-ed2-heading {
@@ -497,10 +499,61 @@ body {
     color: #403219;
 }
 
-.life-at-ed2-image {
+.life-at-ed2-bottom-image {
     height: 40vh;
     width: 50%;
 }
+
+.tm-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 14px;
+}
+.tm-carousel-image {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 90%;
+    opacity: 0;
+    object-fit: contain;
+    z-index: 1;
+    transition: opacity 0.8s cubic-bezier(.4,.23,.3,1);
+    border-radius: inherit;
+    display: block;
+    pointer-events: none;
+}
+.tm-carousel-image.active {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
+}
+.tm-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    left: 0; right: 0; bottom: 12px;
+    z-index: 10;
+}
+.tm-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #bbb;
+    display: inline-block;
+    transition: background 0.25s;
+    cursor: pointer;
+}
+.tm-dot.active {
+    background: #8A6EFF;
+}
+@media (max-width: 800px) {
+    .tm-carousel { max-width: 98vw; }
+}
+
 
 .lets-connect-section {
     display: flex;
@@ -757,21 +810,22 @@ body {
     }
 
     .our-story-section {
-        height: 170vh;
+        height: auto;
         margin-top: 100px;
-        margin-bottom: 100px;
     }
     .our-story-part-1, .our-story-part-2 {
         flex-direction: column;
         width: 100vw;
+        gap: 5vh;
     }
 
     .our-story-image {
-        width: 80%;
+        height: 35vh;
+        width: 80vw;
     }
 
     .our-story-text {
-        width: 80%;
+        width: 80vw;
         height: auto;
         gap: 5vh;
     }
@@ -788,8 +842,8 @@ body {
 
     .life-at-ed2-section {
         height: auto;
-        margin-top: 100px;
         gap: 1vh;
+        margin: 140px 0 0 0;
     }
 
     .life-at-ed2-bottom {
@@ -798,8 +852,9 @@ body {
         gap: 5vh;
     }
 
-    .life-at-ed2-image {
+    .life-at-ed2-bottom-image {
         width: 100%;
+        height: 40vh;
     }
     
     .life-at-ed2-text {
